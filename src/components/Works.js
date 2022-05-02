@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 export default function Works() {
   return (
-    <section id="works" className="works-section mt-200">
+    <section id="works" className="works-section mb-200">
       <div className="works-background">
         <div className="works-title">
           <span className="works-title__subtitle side-subtitle">Projects</span>
@@ -77,4 +77,4 @@ export default function Works() {
       </div>
     </section>
   )
-  }
+}

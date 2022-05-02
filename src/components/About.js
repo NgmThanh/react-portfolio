@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 export default function About() {
   return (
-    <section id="about" className="about-section mt-200">
+    <section id="about" className="about-section mb-200">
       <div className="about-background">
         <div className="about-title">
           <span className="about-title__subtitle side-subtitle">Introduction</span>
@@ -44,7 +44,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="about-process + ' mt-200">
+      <div className="about-process mt-200">
         <div>
           <span className="side-subtitle is-sticky">Design Process</span>
         </div>

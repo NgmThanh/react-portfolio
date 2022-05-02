@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="contact-section mt-200">
+    <section id="contact" className="contact-section">
       <div className="contact-background">
         <div className="contact-title">
           <span className="contact-title__subtitle side-subtitle">Contact</span>
@@ -22,9 +22,9 @@ export default function Contact() {
       </div>
 
       <ul className="contact-social">
-        <li className="underline"><a href="#">Dribbble</a></li>
-        <li className="underline"><a href="#">Instagram</a></li>
-        <li className="underline"><a href="#">LinkedIn</a></li>
+        <li className="underline"><a href="https://dribbble.com/NgmThanh" target="_blank" rel="noreferrer">Dribbble</a></li>
+        <li className="underline"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></li>
+        <li className="underline"><a href="https://www.linkedin.com/in/minh-thanh-nguyen/" target="_blank" rel="noreferrer">LinkedIn</a></li>
       </ul>
     </section>
   )

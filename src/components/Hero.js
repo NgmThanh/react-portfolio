@@ -1,4 +1,3 @@
-
 import '../styles/Hero.scss'
 import { Icon } from '@iconify/react';
 
