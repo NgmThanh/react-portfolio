@@ -1,0 +1,31 @@
+@import "mixins";
+
+.menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent;
+    color: var(--col-white);
+    font-family: 'Euclid Square';
+    font-weight: 400;
+    font-size: 1.6rem;
+    padding: 48px var(--active-margin-grid) 32px;
+    transition: all 0.3s var(--custom-ease-in);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        gap: 64px;
+
+        li {
+            text-transform: uppercase;
+            list-style-type: none;
+        }
+    }
+}

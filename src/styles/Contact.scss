@@ -1,0 +1,51 @@
+@import "mixins";
+
+.contact-section {
+    width: 100%;
+    position: relative;
+}
+
+.contact-background {
+    height: 100vh;
+    background: linear-gradient(180deg, #141416 10.75%, rgba(23, 23, 25, 0.4) 56.3%, #141416 100%), url("../../public/background/milad-fakurian-DjjaZybYx4I-unsplash.jpg");
+    background-size: cover;
+}
+
+.contact-title {
+    padding: 0 var(--active-margin-grid);
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: relative;
+    
+    &__subtitle {
+        top: calc(50% - 120px);
+    }
+}
+
+.contact-social {
+    padding: 0 var(--active-margin-grid);
+    position: absolute;
+    bottom: 48px;
+    display: flex;
+    gap: 64px;
+
+    @include tablet-screen() {
+        gap: 40px;
+    }
+
+    @include mobile-screen() {
+        gap: 32px;
+    }
+
+    li {
+        font-family: 'Euclid Square';
+        font-weight: 400;
+        font-size: 1.6rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        list-style-type: none;
+        color: var(--col-white);
+    }
+}

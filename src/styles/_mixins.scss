@@ -1,0 +1,34 @@
+/* ============================ */
+/* ========== MIXINS ========== */
+/* ============================ */
+
+// media queries mixins
+$breakpoints: (mobile: 500px,
+  tablet: 768px,
+  small-screen: 1024px,
+  large-screen: 1200px,
+);
+
+@mixin mobile-screen {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet-screen {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media screen and (max-width: map-get($breakpoints, small-screen)) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media screen and (max-width: map-get($breakpoints, large-screen)) {
+    @content;
+  }
+}

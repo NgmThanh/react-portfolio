@@ -1,0 +1,149 @@
+@import "mixins";
+
+:root {
+  --col-background: #141416;
+  --col-accentuation: #C19A5B;
+  --col-white: #fff;
+  --col-neutral-primary: #5C5C5E;
+  --col-secondary: #212123;
+  --col-text: #C6C6C6;
+
+  --active-margin-grid: 48px;
+
+  // @include small-screen() {
+  //   --active-margin-grid: 32px;
+  // }
+
+  // @include tablet-screen() {
+  //   --active-margin-grid: 24px;
+  // }
+
+  // @include mobile-screen() {
+  //   --active-margin-grid: 16px;
+  // }
+
+  --vw: calc(100vw - var(--active-margin-grid) * 2);
+  --vh: 100vh;
+  --col-1: 8vw;
+  --col-2: 16vw;
+  --col-3: 24vw;
+  --col-4: 32vw;
+  --col-5: 40vw;
+  --col-6: 48vw;
+  --col-7: 56vw;
+  --col-8: 64vw;
+
+  --custom-ease-in: cubic-bezier(.56, .23, .52, 1);
+  --custom-ease-out: cubic-bezier(.24, .74, .24, .99);
+  --x: 0;
+  --y: 0;
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/EuclidSquare-Bold.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../../public/fonts/EuclidSquare-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../../public/fonts/EuclidSquare-Semibold.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../../public/fonts/EuclidSquare-SemiboldItalic.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../public/fonts/EuclidSquare-Medium.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 500;
+  font-style: italic;
+  src: url("../../public/fonts/EuclidSquare-MediumItalic.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/EuclidSquare-Regular.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../../public/fonts/EuclidSquare-RegularItalic.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../public/fonts/EuclidSquare-Light.otf");
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../../public/fonts/EuclidSquare-LightItalic.otf");
+}
+
+@font-face {
+  font-family: "SangBleu Empire";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/SangBleuEmpire-Regular.otf");
+}
+
+@font-face {
+  font-family: "SangBleu Empire";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../public/fonts/SangBleuEmpire-Medium.otf");
+}
+
+@font-face {
+  font-family: "SangBleu Empire";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/SangBleuEmpire-Bold.otf");
+}
+
+/* =============================== */
+/* ========== MAIN CODE ========== */
+/* =============================== */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* 1 rem = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background: var(--col-background);
+  font-family: 'Euclid Square', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
