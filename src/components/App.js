@@ -4,11 +4,11 @@ import React, { useEffect } from 'react';
 import SmoothScroll from 'smoothscroll-for-websites';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { gsap } from "gsap";
-import Home from './Home';
-import About from './About';
-import Works from './Works';
-import Contact from './Contact';
-import Error from './Error';
+import Home from './pages/Home';
+import Error from './pages/Error';
+import Contact from './layouts/ContactLayout';
+import About from './pages/About';
+import Works from './pages/Works';
 
 export default function App() {
 
