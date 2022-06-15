@@ -5,22 +5,21 @@
   --col-accentuation: #C19A5B;
   --col-white: #fff;
   --col-neutral-primary: #5C5C5E;
-  --col-secondary: #212123;
   --col-text: #C6C6C6;
 
-  --active-margin-grid: 48px;
+  --active-margin-grid: 80px;
 
   // @include small-screen() {
   //   --active-margin-grid: 32px;
   // }
 
-  // @include tablet-screen() {
-  //   --active-margin-grid: 24px;
-  // }
+  @include tablet-screen() {
+    --active-margin-grid: 32px;
+  }
 
-  // @include mobile-screen() {
-  //   --active-margin-grid: 16px;
-  // }
+  @include mobile-screen() {
+    --active-margin-grid: 24px;
+  }
 
   --vw: calc(100vw - var(--active-margin-grid) * 2);
   --vh: 100vh;

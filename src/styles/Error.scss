@@ -1,25 +1,25 @@
-@import "mixins";
+// @import "mixins";
 
-.error-section {
-    width: 100%;
-    position: relative;
-}
+// .error-section {
+//     width: 100%;
+//     position: relative;
+// }
 
-.error-background {
-    height: 100vh;
-    background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0.6) 50%, #141416 100%), url("../../public/background/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg");
-    background-size: cover;
-}
+// .error-background {
+//     height: 100vh;
+//     background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0.6) 50%, #141416 100%), url("../../public/background/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg");
+//     background-size: cover;
+// }
 
-.error-title {
-    padding: 0 var(--active-margin-grid);
-    height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    position: relative;
+// .error-title {
+//     padding: 0 var(--active-margin-grid);
+//     height: 100vh;
+//     display: flex;
+//     flex-flow: column nowrap;
+//     justify-content: center;
+//     position: relative;
     
-    &__subtitle {
-        top: calc(50% - 120px);
-    }
-}
+//     &__subtitle {
+//         top: calc(50% - 120px);
+//     }
+// }

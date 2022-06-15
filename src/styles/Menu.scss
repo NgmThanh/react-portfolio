@@ -8,24 +8,82 @@
     z-index: 999;
     background: transparent;
     color: var(--col-white);
-    font-family: 'Euclid Square';
-    font-weight: 400;
-    font-size: 1.6rem;
-    padding: 48px var(--active-margin-grid) 32px;
+    padding: 48px var(--active-margin-grid);
     transition: all 0.3s var(--custom-ease-in);
+    font-family: 'Euclid Square';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 132%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
 
     &__inner {
         display: flex;
         justify-content: space-between;
-    }
 
-    ul {
-        display: flex;
-        gap: 64px;
+        &--hamburger {
+            display: flex;
+            align-items: center;
 
-        li {
-            text-transform: uppercase;
-            list-style-type: none;
+            .hamburger-icon {
+                margin-right: 16px;
+
+                &::before {
+                    content: "";
+                    display:block;
+                    width: 48px;
+                    height: 1px;
+                    background: var(--col-accentuation);
+                    margin-bottom: 8px;
+                }
+
+                &::after {
+                    content: "";
+                    display:block;
+                    width: 48px;
+                    height: 1px;
+                    background: var(--col-accentuation);
+                }
+            }
+
+
+        }
+
+        &--logo {
+            font-family: 'SangBleu Empire';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 120%;
+
+            .logo-mid {
+                font-size: 3.2rem;
+            }
+        }
+
+        &--contact {
+            position: relative;
+
+            .contact-circle {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid var(--col-accentuation);
+                position: absolute;
+                top: -15px;
+                right: -24px;
+            }
         }
     }
+
+    // ul {
+    //     display: flex;
+    //     gap: 64px;
+
+    //     li {
+    //         text-transform: uppercase;
+    //         list-style-type: none;
+    //     }
+    // }
 }

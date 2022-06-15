@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 export default function WorksLayout() {
   return (
     <section id="works" className="works-section mb-200">
-      <div className="works-background">
+      {/* <div className="works-background">
         <div className="works-title">
           <span className="works-title__subtitle side-subtitle">Projects</span>
 
@@ -74,7 +74,7 @@ export default function WorksLayout() {
             </div>
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

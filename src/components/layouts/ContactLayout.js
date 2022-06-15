@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 export default function ContactLayout() {
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-background">
+      {/* <div className="contact-background">
         <div className="contact-title">
           <span className="contact-title__subtitle side-subtitle">Contact</span>
 
@@ -25,7 +25,7 @@ export default function ContactLayout() {
         <li className="underline"><a href="https://dribbble.com/NgmThanh" target="_blank" rel="noreferrer">Dribbble</a></li>
         <li className="underline"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></li>
         <li className="underline"><a href="https://www.linkedin.com/in/minh-thanh-nguyen/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-      </ul>
+      </ul> */}
     </section>
   )
 }

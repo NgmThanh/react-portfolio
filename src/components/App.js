@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import SmoothScroll from 'smoothscroll-for-websites';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { gsap } from "gsap";
+import Menu from './layouts/Menu';
 import Home from './pages/Home';
 import Error from './pages/Error';
 import Contact from './layouts/ContactLayout';
@@ -77,7 +78,7 @@ export default function App() {
       </div>
 
       <Router>
-        <nav id="menu" className="menu">
+        {/* <nav id="menu" className="menu">
           <div className="menu__inner">
             <Link to="/"><div><span>M</span><span className="italic side-subtitle">Thanh</span></div></Link>
             <ul>
@@ -87,7 +88,8 @@ export default function App() {
               <li><Link to="/contact" id="contactButton">Contact</Link></li>
             </ul>
           </div>
-        </nav>
+        </nav> */}
+        <Menu></Menu>
 
         <Routes>
           <Route path="/" element={<Home />} />

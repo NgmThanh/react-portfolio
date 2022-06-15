@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 export default function Error() {
   return (
     <section id="error" className="error-section">
-      <div className="error-background">
+      {/* <div className="error-background">
         <div className="error-title">
           <span className="error-title__subtitle side-subtitle">Error</span>
 
@@ -21,7 +21,7 @@ export default function Error() {
             </div>
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

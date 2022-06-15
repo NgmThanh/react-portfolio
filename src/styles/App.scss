@@ -18,9 +18,9 @@
 
 p {
   font-family: 'Euclid Square';
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 164%;
   letter-spacing: -0.02em;
   color: var(--col-text);
 }
@@ -30,31 +30,89 @@ a {
   text-decoration: none;
 }
 
-.title-primary,
-.title-secondary {
-  font-family: 'SangBleu Empire', sans-serif;
-  font-weight: 400;
-  font-size: 6.4vw;
-  line-height: 8vw;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+.font-bright {
   color: var(--col-white);
-  z-index: 1;
 }
 
-.title-primary {
+.font-light {
+  color: var(--col-text);
+}
+
+.font-dark {
+  color: var(--col-background);
+}
+
+.font-gold {
+  color: var(--col-accentuation);
+}
+
+.title-main, .title-second, .title-third {
+  font-family: 'SangBleu Empire';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.title-main {
+  font-size: 20rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.title-secondary {
-  margin: 0;
-  font-size: 8rem;
-  line-height: normal;
-  float: left;
+.title-second {
+  font-size: 16rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+.title-third {
+  font-size: 12rem;
+}
+
+.side-subtitle {
+  font-family: 'Euclid Square';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 132%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  padding-top: 10px;
+  display: block;
+}
+
+// .title-primary,
+// .title-secondary {
+//   font-family: 'SangBleu Empire', sans-serif;
+//   font-weight: 400;
+//   font-size: 6.4vw;
+//   line-height: 8vw;
+//   letter-spacing: -0.02em;
+//   text-transform: uppercase;
+//   color: var(--col-white);
+//   z-index: 1;
+// }
+
+// .title-primary {
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }
+
+// .title-secondary {
+//   margin: 0;
+//   font-size: 8rem;
+//   line-height: normal;
+//   float: left;
+// }
 
 h3.subtitle {
   font-family: 'Euclid Square', sans-serif;
@@ -64,13 +122,6 @@ h3.subtitle {
   color: var(--col-white);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.side-subtitle {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  color: var(--col-accentuation);
-  position: absolute;
 }
 
 .colored {
@@ -312,7 +363,7 @@ h3.subtitle {
   bottom: auto;
   right: auto;
   background: var(--col-background);
-  transition: all 0.6s cubic-bezier(.18,.67,.79,.38);
+  transition: all 0.6s cubic-bezier(.18, .67, .79, .38);
   z-index: 1000000;
 
   &.active {
@@ -321,6 +372,6 @@ h3.subtitle {
 }
 
 .bottom-layer--2 {
-	background: var(--col-secondary);
-	transition-delay: 0.24s;
+  background: var(--col-secondary);
+  transition-delay: 0.24s;
 }

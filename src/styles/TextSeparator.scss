@@ -1,43 +1,43 @@
-@import "mixins";
+// @import "mixins";
 
-.text-separator_section {
-    width: 100%;
+// .text-separator_section {
+//     width: 100%;
 
-    .text-separator__container {
-        overflow: hidden;
+//     .text-separator__container {
+//         overflow: hidden;
 
-        .text-separator__scroll_1 {
-            animation: scrollTextLeft 20s linear infinite;
-        }
+//         .text-separator__scroll_1 {
+//             animation: scrollTextLeft 20s linear infinite;
+//         }
 
-        .text-separator__scroll_2 {
-            animation: scrollTextRight 20s linear infinite;
-        }
+//         .text-separator__scroll_2 {
+//             animation: scrollTextRight 20s linear infinite;
+//         }
 
-        & > span {
-            white-space: nowrap;
-            display: inline-block;
-        }
-    }
-}
+//         & > span {
+//             white-space: nowrap;
+//             display: inline-block;
+//         }
+//     }
+// }
 
-@keyframes scrollTextLeft {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
+// @keyframes scrollTextLeft {
+//     0% {
+//         transform: translate3d(0, 0, 0);
+//     }
 
-    100% {
-        transform: translate3d(-2347px, 0, 0);
-    }
-}
+//     100% {
+//         transform: translate3d(-2347px, 0, 0);
+//     }
+// }
 
-@keyframes scrollTextRight {
-    0% {
-        transform: translate3d(-2347px, 0, 0);
-    }
+// @keyframes scrollTextRight {
+//     0% {
+//         transform: translate3d(-2347px, 0, 0);
+//     }
 
-    100% {
-        transform: translate3d(0, 0, 0);
+//     100% {
+//         transform: translate3d(0, 0, 0);
 
-    }
-}
+//     }
+// }

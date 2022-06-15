@@ -5,7 +5,8 @@ export default function HeroLayout() {
 
   return (
     <section id="home" className="hero-section">
-      <div className="hero-background">
+      
+      {/* <div className="hero-background">
         <div className="hero-title__container">
           <span className="hero-subtitle side-subtitle">Portfolio</span>
 
@@ -19,9 +20,6 @@ export default function HeroLayout() {
             </div>
           </a>
 
-          {/* <button id="bottom" className="arrow-button button">
-            <Icon icon="carbon:arrow-down-right" />
-          </button> */}
           <div className="last-updated side-subtitle">2022</div>
           <div className="scroll-down">
             Scroll Down
@@ -43,7 +41,7 @@ export default function HeroLayout() {
             <Icon icon="carbon:arrow-down" />
           </div>
         </a>
-      </div>
+      </div> */}
     </section>
   )
 }
