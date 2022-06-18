@@ -1,5 +1,4 @@
 import '../../styles/Hero.scss'
-import { Icon } from '@iconify/react';
 
 export default function HeroMainLayout() {
 
@@ -7,7 +6,7 @@ export default function HeroMainLayout() {
     <section id="home" className="main-hero-section">
       <div className="main-hero-background">
         <div className="main-hero-content">
-          <div className="side-subtitle font-gold col-1">Portfolio</div>
+          <div className="uppercase-subtitle font-gold col-1">Portfolio</div>
           <div>
             <h1 className="title-main font-bright">
               <span className="">Creative</span><br></br>

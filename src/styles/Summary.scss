@@ -1,0 +1,42 @@
+@import "mixins";
+
+.summary-section {
+    padding: 240px var(--active-margin-grid);
+    background: var(--col-white);
+}
+
+.summary-title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .script {
+        position: absolute;
+        top: 120px;
+    }
+}
+
+.summary-1 {
+    padding-top: 285px;
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        max-height: 100vh;
+    }
+}
+
+.summary-2 {
+
+    &__gallery {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+
+        img {
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+}

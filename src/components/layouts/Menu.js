@@ -52,9 +52,9 @@ export default function Menu() {
     // </Router>
     <nav id="menu" className="menu">
       <div className="menu__inner">
-        <div className="menu__inner--hamburger"><div className="hamburger-icon"></div>Menu</div>
+        <div className="menu__inner--hamburger"><div className="hamburger-icon"></div><span>Menu</span></div>
         <div className="menu__inner--logo">M<span className="logo-mid font-gold">T</span>H</div>
-        <div className="menu__inner--contact">Get in touch<div className="contact-circle"></div></div>
+        <div className="menu__inner--contact"><span>Get in touch</span><div className="contact-circle"></div></div>
       </div>
     </nav>
   )

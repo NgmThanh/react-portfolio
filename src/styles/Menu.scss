@@ -26,12 +26,16 @@
             display: flex;
             align-items: center;
 
+            span {
+                mix-blend-mode: difference;
+            }
+
             .hamburger-icon {
                 margin-right: 16px;
 
                 &::before {
                     content: "";
-                    display:block;
+                    display: block;
                     width: 48px;
                     height: 1px;
                     background: var(--col-accentuation);
@@ -40,14 +44,12 @@
 
                 &::after {
                     content: "";
-                    display:block;
+                    display: block;
                     width: 48px;
                     height: 1px;
                     background: var(--col-accentuation);
                 }
             }
-
-
         }
 
         &--logo {
@@ -64,6 +66,10 @@
 
         &--contact {
             position: relative;
+
+            span {
+                mix-blend-mode: difference;
+            }
 
             .contact-circle {
                 width: 48px;

@@ -3,7 +3,7 @@
 :root {
   --col-background: #141416;
   --col-accentuation: #C19A5B;
-  --col-white: #fff;
+  --col-white: #F6F6F6;
   --col-neutral-primary: #5C5C5E;
   --col-text: #C6C6C6;
 
@@ -127,6 +127,13 @@
   font-weight: 700;
   font-style: normal;
   src: url("../../public/fonts/SangBleuEmpire-Bold.otf");
+}
+
+@font-face {
+  font-family: "Cloudy Aurora";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/Cloudy\ Aurora\ Script.otf");
 }
 
 /* =============================== */
