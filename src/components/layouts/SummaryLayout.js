@@ -25,7 +25,7 @@ export default function SummaryLayout() {
           <img src="./summary-1.jpg" alt="desktop" className="col-8"></img>
         </div>
         <p className="mt-240 ml-4 col-4 font-20 font-dark">Always in love with code and design, i like to learn new things every day and challenge myself with new projects, translating concepts into visual design by paying close attention to details, and convert it into highly interactive experiences.</p>
-        <div className="mt-80 ml-4 uppercase-subtitle btn"><span>More about me</span></div>
+        <div className="mt-80 ml-4 uppercase-subtitle btn font-dark"><span>More about me</span></div>
       </div>
     </section>
   )

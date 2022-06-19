@@ -1,4 +1,56 @@
-// @import "mixins";
+@import "mixins";
+
+// WORKS SECTION MAIN PAGE
+
+.main-works-section {
+    padding: 240px var(--active-margin-grid);
+    background: var(--col-background);
+    text-align: center;
+
+    .title-third {
+        margin-top: 40px;
+    }
+
+    .script {
+        margin-top: -168px;
+    }
+
+    .btn {
+        display: inline-block;
+    }
+}
+
+.projects-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--col-1);
+
+    .project-container {
+        height: 800px;
+        background: var(--col-accentuation);
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-title {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+        }
+    }
+
+    .project-right {}
+
+    .project-left {
+        margin-top: 240px;
+    }
+}
 
 // .works-section {
 //     width: 100%;
@@ -17,7 +69,7 @@
 //     flex-flow: column nowrap;
 //     justify-content: center;
 //     position: relative;
-    
+
 //     &__subtitle {
 //         top: calc(25% - 120px);
 //     }

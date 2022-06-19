@@ -1,5 +1,4 @@
 import "../../styles/Contact.scss"
-import { Icon } from "@iconify/react";
 
 export default function ContactLayout() {
   return (

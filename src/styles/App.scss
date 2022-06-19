@@ -70,6 +70,10 @@ a {
   text-align: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .title-main,
 .title-second,
 .title-third {
@@ -140,10 +144,18 @@ a {
     border-radius: 50%;
   }
 
+  &.btn.font-light::before {
+    background: var(--col-text);
+  }
+
   &.btn span {
     width: fit-content;
     border-bottom: 2px solid var(--col-background);
     padding-bottom: 4px;
+  }
+
+  &.btn.font-light span {
+    border-bottom: 2px solid var(--col-text);
   }
 }
 
@@ -153,6 +165,8 @@ a {
   font-weight: 400;
   font-size: 28rem;
   color: var(--col-accentuation);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .colored {
