@@ -1,30 +1,30 @@
 import "../../styles/Contact.scss"
 
 export default function ContactLayout() {
+
   return (
     <section id="contact" className="contact-section">
-      {/* <div className="contact-background">
+      <div className="contact-container">
         <div className="contact-title">
-          <span className="contact-title__subtitle side-subtitle">Contact</span>
-
-          <h1 className="title-primary ml-1">
-            <span><div className="line-left"></div>Let&#039;s work</span><br></br>
-            <span className="ml-2 colored">Together</span>
-          </h1>
-
-          <a href="mailto:nmthanh99@gmail.com">
-            <div className="arrow-button">
-              <Icon icon="carbon:arrow-right" />
-            </div>
-          </a>
+          <div>
+            <a href="mailto:nmthanh99@gmail.com" className="title-third font-bright">nmthanh99<br></br>@gmail</a>
+            <div className="script">Contact</div>
+          </div>
+          <div className="subtitle-medium text-right font-light">Send me a <span className="font-gold">message</span></div>
         </div>
       </div>
 
-      <ul className="contact-social">
-        <li className="underline"><a href="https://dribbble.com/NgmThanh" target="_blank" rel="noreferrer">Dribbble</a></li>
-        <li className="underline"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></li>
-        <li className="underline"><a href="https://www.linkedin.com/in/minh-thanh-nguyen/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-      </ul> */}
+      <div className="contact-footer subtitle-small font-light">
+        <div><span className="font-gold">MTH Design</span> © 2022</div>
+        <div>
+          <ul className="contact-social">
+            <li className="subtitle-small underline font-light"><a href="https://dribbble.com/NgmThanh" target="_blank" rel="noreferrer">Dribbble</a></li>
+            <li className="subtitle-small underline font-light"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li className="subtitle-small underline font-light"><a href="https://www.linkedin.com/in/minh-thanh-nguyen/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>Website by <span className="font-gold">Minh Thanh</span></div>
+      </div>
     </section>
   )
 }

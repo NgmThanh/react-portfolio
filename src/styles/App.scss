@@ -16,13 +16,12 @@
   }
 }
 
-p {
+p, .text {
   font-family: 'Euclid Square';
   font-size: 2rem;
   font-weight: 400;
   line-height: 164%;
   letter-spacing: -0.02em;
-  color: var(--col-text);
 }
 
 a {
@@ -48,22 +47,6 @@ a {
 
 .font-gold {
   color: var(--col-accentuation);
-}
-
-.font-16 {
-  font-size: 1.6rem;
-}
-
-.font-20 {
-  font-size: 2.0rem;
-}
-
-.font-32 {
-  font-size: 3.2rem;
-}
-
-.font-56 {
-  font-size: 5.6rem;
 }
 
 .text-right {
@@ -107,39 +90,39 @@ a {
   font-size: 12rem;
 }
 
-.side-title {
+.subtitle-small, .subtitle-medium, .subtitle-large {
   font-family: 'Euclid Square';
   font-style: normal;
   font-weight: 500;
-  font-size: 3.2rem;
   line-height: 132%;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  display: block;
 }
 
-.uppercase-subtitle {
-  font-family: 'Euclid Square';
-  font-style: normal;
-  font-weight: 500;
+.subtitle-large {
+  font-size: 5.6rem;
+}
+
+.subtitle-medium {
+  font-size: 3.2rem;
+}
+
+.subtitle-small {
   font-size: 1.6rem;
-  line-height: 132%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  padding-top: 10px;
-  display: block;
 
   &.btn {
-    padding-left: 16px;
+    padding-left: 14px;
     position: relative;
   }
 
   &.btn::before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: var(--col-background);
     position: absolute;
-    top: 50%;
+    top: 6px;
     left: 0;
     border-radius: 50%;
   }
@@ -148,14 +131,14 @@ a {
     background: var(--col-text);
   }
 
-  &.btn span {
+  &.btn span, &.underline a {
     width: fit-content;
-    border-bottom: 2px solid var(--col-background);
+    border-bottom: 1px solid var(--col-background);
     padding-bottom: 4px;
   }
 
-  &.btn.font-light span {
-    border-bottom: 2px solid var(--col-text);
+  &.btn.font-light span, &.underline.font-light a {
+    border-bottom: 1px solid var(--col-text);
   }
 }
 
@@ -164,9 +147,15 @@ a {
   font-style: normal;
   font-weight: 400;
   font-size: 28rem;
+  line-height: 100%;
   color: var(--col-accentuation);
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   z-index: 0;
+  margin-top: -80px;
 }
 
 .colored {

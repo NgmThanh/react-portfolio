@@ -3,16 +3,12 @@
 // WORKS SECTION MAIN PAGE
 
 .main-works-section {
-    padding: 240px var(--active-margin-grid);
+    margin: 240px var(--active-margin-grid);
     background: var(--col-background);
     text-align: center;
 
     .title-third {
         margin-top: 40px;
-    }
-
-    .script {
-        margin-top: -168px;
     }
 
     .btn {

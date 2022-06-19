@@ -12,19 +12,11 @@
 
     .main-hero-content {
         display: flex;
-    }
-}
 
-.title-description {
-    font-family: 'Euclid Square';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 3.2rem;
-    line-height: 132%;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    margin-top: 80px;
-    display: block;
+        .subtitle-small {
+            margin-top: 10px;
+        }
+    }
 }
 
 // .hero-section {

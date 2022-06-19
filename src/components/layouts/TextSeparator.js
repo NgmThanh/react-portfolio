@@ -1,6 +1,7 @@
 import '../../styles/TextSeparator.scss'
 
 export default function TextSeparator() {
+  
   return (
     <section className="text-separator_section mt-200 mb-200">
       {/* <div className="text-separator__container">
