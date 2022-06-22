@@ -17,23 +17,3 @@
     display: flex;
     justify-content: space-between;
 }
-
-.contact-footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 0 48px;
-    border-top: 1px solid var(--col-neutral-primary);
-
-    .contact-social {
-        display: flex;
-        gap: 64px;
-
-        li {
-            list-style-type: none;
-        }
-    }
-}

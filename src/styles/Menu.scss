@@ -83,3 +83,71 @@
         }
     }
 }
+
+.menu-opened {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: var(--col-background);
+}
+
+.menu-content {
+    height: 100%;
+    position: relative;
+    margin: 0 var(--active-margin-grid);
+    display: flex;
+
+    .menu-left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__inner {
+            display: flex;
+
+            .subtitle-small {
+                transform: rotate(-90deg);
+                width: fit-content;
+                height: fit-content;
+                margin-top: 44px;
+            }
+
+            .menu-pages li {
+                margin: 24px;
+                color: var(--col-neutral-primary);
+            }
+
+            .menu-pages li.active,
+            .menu-pages li:hover {
+                color: var(--col-white);
+            }
+        }
+    }
+
+    .menu-right {
+        width: 50%;
+        height: 100%;
+        position: relative;
+
+        &__inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: var(--col-3);
+                height: 640px;
+            }
+        }
+    }
+}

@@ -59,7 +59,9 @@ a {
 
 .title-main,
 .title-second,
-.title-third {
+.title-third,
+.title-fourth,
+.nb-hover-menu {
   font-family: 'SangBleu Empire';
   font-style: normal;
   font-weight: 400;
@@ -88,6 +90,16 @@ a {
 
 .title-third {
   font-size: 12rem;
+}
+
+.title-fourth {
+  font-size: 8rem;
+}
+
+.nb-hover-menu {
+  font-size: 3.2rem;
+  display: none;
+  margin-right: 24px;
 }
 
 .subtitle-small, .subtitle-medium, .subtitle-large {
@@ -415,4 +427,16 @@ a {
 .bottom-layer--2 {
   background: var(--col-secondary);
   transition-delay: 0.24s;
+}
+
+.active-inline {
+  display: inline-block !important;
+}
+
+.active {
+  display: block !important;
+}
+
+.inactive {
+  display: none !important;
 }
