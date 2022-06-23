@@ -1,15 +1,8 @@
 import '../styles/App.scss';
-import '../styles/Menu.scss'
 import React, { useEffect } from 'react';
 import SmoothScroll from 'smoothscroll-for-websites';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { gsap } from "gsap";
 import Menu from './layouts/Menu';
-import Home from './pages/Home';
-import Error from './pages/Error';
-import Contact from './layouts/ContactLayout';
-import About from './pages/About';
-import Works from './pages/Works';
 
 export default function App() {
 
@@ -77,28 +70,7 @@ export default function App() {
         </div>
       </div>
 
-      <Router>
-        {/* <nav id="menu" className="menu">
-          <div className="menu__inner">
-            <Link to="/"><div><span>M</span><span className="italic side-subtitle">Thanh</span></div></Link>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about" id="aboutButton">About</Link></li>
-              <li><Link to="/works" id="projectButton">Projects</Link></li>
-              <li><Link to="/contact" id="contactButton">Contact</Link></li>
-            </ul>
-          </div>
-        </nav> */}
-        <Menu></Menu>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
+      <Menu />
     </div>
   );
 }

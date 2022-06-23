@@ -2,8 +2,9 @@ import WorksLayout from '../layouts/WorksLayout';
 
 export default function Works() {
   return (
-    <main>
+    <section>
+      <p className='font-bright'>WORKS</p>
       <WorksLayout />
-    </main>
+    </section>
   )
 }

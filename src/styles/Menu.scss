@@ -21,10 +21,12 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        user-select: none;
 
         &--hamburger {
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             span {
                 mix-blend-mode: difference;

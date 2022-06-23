@@ -1,10 +1,10 @@
 
 import '../../styles/Error.scss'
-import { Icon } from "@iconify/react";
 
 export default function Error() {
   return (
     <section id="error" className="error-section">
+      <p className='font-bright'>ERROR</p>
       {/* <div className="error-background">
         <div className="error-title">
           <span className="error-title__subtitle side-subtitle">Error</span>

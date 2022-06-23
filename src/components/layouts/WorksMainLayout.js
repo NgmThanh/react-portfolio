@@ -10,22 +10,22 @@ export default function WorksMainLayout() {
 
       <div className="projects-grid">
         <div className="project-container project-right">
-          <img src="/works-design-1.jpg"></img>
+          <img src="/works-design-1.jpg" alt=""></img>
           <span className="project-title subtitle-medium font-bright">Self Branding</span>
         </div>
         
         <div className="project-container project-left">
-          <img src="/works-design-1.jpg"></img>
+          <img src="/works-design-1.jpg" alt=""></img>
           <span className="project-title subtitle-medium font-bright">Self Branding</span>
         </div>
 
         <div className="project-container project-right">
-          <img src="/works-design-1.jpg"></img>
+          <img src="/works-design-1.jpg" alt=""></img>
           <span className="project-title subtitle-medium font-bright">Self Branding</span>
         </div>
 
         <div className="project-container project-left">
-          <img src="/works-design-1.jpg"></img>
+          <img src="/works-design-1.jpg" alt=""></img>
           <span className="project-title subtitle-medium font-bright">Self Branding</span>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import '../../styles/Works.scss'
-import { Icon } from '@iconify/react';
 
 export default function WorksLayout() {
   return (

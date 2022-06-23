@@ -1,5 +1,12 @@
 import '../../styles/Menu.scss'
 import React, { useEffect } from "react";
+import FooterLayout from './FooterLayout'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Works from '../pages/Works';
+import Error from '../pages/Error';
+
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // import About from './AboutLayout';
 // import Works from './WorksLayout';
@@ -26,6 +33,15 @@ export default function Menu() {
 
       prevScrollpos = currentScrollPos;
     }
+
+    // Click menu event
+    const menuBtn = document.querySelector(".menu__inner--hamburger");
+    const menuLayout = document.querySelector(".menu-opened");
+
+    menuBtn.onclick = () => {
+      menuLayout.classList.toggle("active")
+    }
+
   }, []);
 
   return (
@@ -50,12 +66,76 @@ export default function Menu() {
     //     <Route path="*" element={<Error />} />
     //   </Routes>
     // </Router>
-    <nav id="menu" className="menu">
-      <div className="menu__inner">
-        <div className="menu__inner--hamburger"><div className="hamburger-icon"></div><span>Menu</span></div>
-        <div className="menu__inner--logo">M<span className="logo-mid font-gold">T</span>H</div>
-        <div className="menu__inner--contact"><span>Get in touch</span><div className="contact-circle"></div></div>
-      </div>
-    </nav>
+    //   <Router>
+    //   {/* <nav id="menu" className="menu">
+    //     <div className="menu__inner">
+    //       <Link to="/"><div><span>M</span><span className="italic side-subtitle">Thanh</span></div></Link>
+    //       <ul>
+    //         <li><Link to="/">Home</Link></li>
+    //         <li><Link to="/about" id="aboutButton">About</Link></li>
+    //         <li><Link to="/works" id="projectButton">Projects</Link></li>
+    //         <li><Link to="/contact" id="contactButton">Contact</Link></li>
+    //       </ul>
+    //     </div>
+    //   </nav> */}
+    //   <Menu />
+
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/about" element={<About />} />
+    //     <Route path="/works" element={<Works />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //     <Route path="*" element={<Error />} />
+    //   </Routes>
+    // </Router>
+
+    <section>
+
+      <Router>
+        <nav id="menu" className="menu">
+          <div className="menu__inner">
+            <div className="menu__inner--hamburger"><div className="hamburger-icon"></div><span>Menu</span></div>
+            <div className="menu__inner--logo"><Link to="/About">M<span className="logo-mid font-gold">T</span>H</Link></div>
+            <div className="menu__inner--contact"><span>Get in touch</span><div className="contact-circle"></div></div>
+          </div>
+        </nav>
+
+        <section id="menu-opened" className="menu-opened">
+          <div className="menu-content">
+            <div className="menu-left">
+              <div className="menu-left__inner">
+                <div className="subtitle-small font-light">Menu</div>
+                <div>
+                  <ul className="menu-pages">
+                    <li className="title-fourth font-light"><Link to="/"><span className="nb-hover-menu font-gold">01</span>Home</Link></li>
+                    <li className="title-fourth font-light"><Link to="/About"><span className="nb-hover-menu font-gold active-inline">02</span>About me</Link></li>
+                    <li className="title-fourth font-light"><Link to="/Works"><span className="nb-hover-menu font-gold">03</span>Projects</Link></li>
+                    <li className="title-fourth font-light"><Link to="/"><span className="nb-hover-menu font-gold">04</span>Contact</Link></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="menu-right">
+              <div className="menu-right__inner">
+                <img src="./summary-1.jpg" alt="menu image"></img>
+              </div>
+            </div>
+
+            <FooterLayout />
+          </div>
+        </section >
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/works" element={<Works />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="*" element={<Error />} />
+        </Routes>
+
+      </Router>
+
+    </section >
   )
 }

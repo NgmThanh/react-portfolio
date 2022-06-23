@@ -3,9 +3,8 @@ import ContactLayout from '../layouts/ContactLayout';
 
 export default function About() {
   return (
-    <main>
-      <AboutLayout />
-      <ContactLayout />
-    </main>
+    <section>
+      <p className='font-bright'>ABOUT</p>
+    </section>
   )
 }
