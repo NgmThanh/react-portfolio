@@ -124,12 +124,27 @@
 
             .menu-pages li {
                 margin: 24px;
-                color: var(--col-neutral-primary);
-            }
 
-            .menu-pages li.active,
-            .menu-pages li:hover {
-                color: var(--col-white);
+                a.active {
+                    span.element-menu {
+                        -webkit-text-stroke: 0;
+                        color: var(--col-accentuation);
+                    }
+
+                    .nb-hover-menu {
+                        display: inline-block;
+                    }
+                }
+
+                .element-menu {
+                    color: transparent;
+                    -webkit-text-stroke: 2px var(--col-neutral-primary);
+                }
+
+                &:hover span.element-menu {
+                    color: var(--col-white);
+                    -webkit-text-stroke: 0;
+                }
             }
         }
     }
@@ -147,8 +162,8 @@
             justify-content: center;
 
             img {
-                width: var(--col-3);
-                height: 640px;
+                height: 680px;
+                object-fit: cover;
             }
         }
     }

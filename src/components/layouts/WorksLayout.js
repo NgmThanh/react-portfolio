@@ -43,6 +43,9 @@ export default function WorksLayout() {
             <img src="/summary-1.jpg" alt=""></img>
           </div>
         </Slider>
+      </div>
+
+      <div className="works-footer">
         <FooterLayout />
       </div>
     </section>

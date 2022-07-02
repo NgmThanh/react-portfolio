@@ -58,7 +58,6 @@
 .works-content {
     height: 100%;
     position: relative;
-    // margin: 0 var(--active-margin-grid);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,4 +109,9 @@
             color: var(--col-white);
         }
     }
+}
+
+.works-footer {
+    margin: 0 var(--active-margin-grid);
+    position: relative;
 }

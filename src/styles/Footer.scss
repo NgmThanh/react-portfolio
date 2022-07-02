@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 0 48px;
-    border-top: 1px solid var(--col-neutral-primary);
 
     .footer-social {
         display: flex;
@@ -18,8 +17,4 @@
             list-style-type: none;
         }
     }
-}
-
-.menu-opened .footer, .works-content .footer {
-    border: none;
 }

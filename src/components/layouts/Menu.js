@@ -107,10 +107,30 @@ export default function Menu() {
                 <div className="subtitle-small font-light">Menu</div>
                 <div>
                   <ul className="menu-pages">
-                    <li className="title-fourth font-light"><Link to="/"><span className="nb-hover-menu font-gold">01</span>Home</Link></li>
-                    <li className="title-fourth font-light"><Link to="/About"><span className="nb-hover-menu font-gold active-inline">02</span>About me</Link></li>
-                    <li className="title-fourth font-light"><Link to="/Works"><span className="nb-hover-menu font-gold">03</span>Projects</Link></li>
-                    <li className="title-fourth font-light"><Link to="/"><span className="nb-hover-menu font-gold">04</span>Contact</Link></li>
+                    <li className="title-fourth">
+                      <Link to="/">
+                        <span className="nb-hover-menu font-bright">01</span>
+                        <span className="element-menu">Home</span>
+                      </Link>
+                    </li>
+                    <li className="title-fourth">
+                      <Link to="/About" className="active">
+                        <span className="nb-hover-menu font-bright">02</span>
+                        <span className="element-menu">About me</span>
+                      </Link>
+                    </li>
+                    <li className="title-fourth">
+                      <Link to="/Works">
+                        <span className="nb-hover-menu font-bright">03</span>
+                        <span className="element-menu">Projects</span>
+                      </Link>
+                    </li>
+                    <li className="title-fourth">
+                      <Link to="/">
+                        <span className="nb-hover-menu font-bright">04</span>
+                        <span className="element-menu">Contact</span>
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -118,7 +138,7 @@ export default function Menu() {
 
             <div className="menu-right">
               <div className="menu-right__inner">
-                <img src="./summary-1.jpg" alt="menu"></img>
+                <img src="./summary-1.jpg" alt="menu" className="col-3"></img>
               </div>
             </div>
 

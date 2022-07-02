@@ -12,7 +12,6 @@ export default function FooterLayout() {
           <li className="subtitle-small underline font-light"><a href="https://www.linkedin.com/in/minh-thanh-nguyen/" target="_blank" rel="noreferrer">LinkedIn</a></li>
         </ul>
       </div>
-      <div>Website by <span className="font-gold">Minh Thanh</span></div>
     </div>
   )
 }
