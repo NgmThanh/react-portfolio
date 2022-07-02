@@ -1,79 +1,50 @@
 import '../../styles/Works.scss'
+import Slider from "react-slick";
+import FooterLayout from './FooterLayout'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function WorksLayout() {
+
+  var settings = {
+    className: "center",
+    centerMode: true,
+    // centerPadding: "25%",
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    focusOnSelect: true,
+    variableWidth: true,
+    // slidesToScroll: 1
+  };
+
   return (
-    <section id="works" className="works-section mb-200">
-      {/* <div className="works-background">
-        <div className="works-title">
-          <span className="works-title__subtitle side-subtitle">Projects</span>
-
-          <h1 className="title-primary ml-1">
-            <span><div className="line-left"></div>Discover</span><br></br>
-            <span className="ml-2">my</span><span className="colored">&nbsp;projects</span>
-          </h1>
-
-          <a href="#worksContent">
-            <div className="arrow-button">
-              <Icon icon="carbon:arrow-down-right" />
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div className="clearfix'"></div>
-
-      <div id="worksContent" className="works-content mt-200">
-        <div>
-          <div className="side-subtitle is-sticky">
-            <span>Projects</span>
-            <div className="arrow-icon works-content__icon">
-              <Icon icon="carbon:arrow-down-right" />
-            </div>
+    <section id="works" className="works-section">
+      <div className="works-content">
+        <Slider {...settings}>
+          <div>
+            <img src="/summary-1.jpg" alt=""></img>
           </div>
-        </div>
-
-        <div className="works-grid">
-          <a href='#'>
-            <div className="works-grid__item">
-              <div className="works-grid__item--canvas">
-                <img src="../works-assistant.jpg" alt="work illustration" />
-              </div>
-              <div className="works-grid__item--title">HD Assistante</div>
-              <div className="works-grid__item--description">Web Design</div>
-            </div>
-          </a>
-
-          <a href='#'>
-            <div className="works-grid__item">
-              <div className="works-grid__item--canvas">
-                <img src="../works-design-1.jpg" alt="work illustration" />
-              </div>
-              <div className="works-grid__item--title">HD Assistante</div>
-              <div className="works-grid__item--description">Web Design</div>
-            </div>
-          </a>
-
-          <a href='#'>
-            <div className="works-grid__item">
-              <div className="works-grid__item--canvas">
-                <img src="../works-design-2.jpg" alt="work illustration" />
-              </div>
-              <div className="works-grid__item--title">HD Assistante</div>
-              <div className="works-grid__item--description">Web Design</div>
-            </div>
-          </a>
-
-          <a href='#'>
-            <div className="works-grid__item">
-              <div className="works-grid__item--canvas">
-                <img src="../works-real-estate.jpg" alt="work illustration" />
-              </div>
-              <div className="works-grid__item--title">HD Assistante</div>
-              <div className="works-grid__item--description">Web Design</div>
-            </div>
-          </a>
-        </div>
-      </div> */}
+          <div>
+            <img src="/summary-1.jpg" alt=""></img>
+          </div>
+          <div>
+            <img src="/summary-1.jpg" alt=""></img>
+          </div>
+          <div>
+            <img src="/summary-1.jpg" alt=""></img>
+          </div>
+          <div>
+            <img src="/summary-1.jpg" alt=""></img>
+          </div>
+          <div>
+            <img src="/summary-1.jpg" alt=""></img>
+          </div>
+        </Slider>
+        <FooterLayout />
+      </div>
     </section>
   )
 }

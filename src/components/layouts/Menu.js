@@ -95,7 +95,7 @@ export default function Menu() {
         <nav id="menu" className="menu">
           <div className="menu__inner">
             <div className="menu__inner--hamburger"><div className="hamburger-icon"></div><span>Menu</span></div>
-            <div className="menu__inner--logo"><Link to="/About">M<span className="logo-mid font-gold">T</span>H</Link></div>
+            <div className="menu__inner--logo"><Link to="/">M<span className="logo-mid font-gold">T</span>H</Link></div>
             <div className="menu__inner--contact"><span>Get in touch</span><div className="contact-circle"></div></div>
           </div>
         </nav>
@@ -118,7 +118,7 @@ export default function Menu() {
 
             <div className="menu-right">
               <div className="menu-right__inner">
-                <img src="./summary-1.jpg" alt="menu image"></img>
+                <img src="./summary-1.jpg" alt="menu"></img>
               </div>
             </div>
 

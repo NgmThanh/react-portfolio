@@ -1,5 +1,4 @@
 import '../../styles/About.scss'
-import { Icon } from '@iconify/react';
 
 export default function AboutLayout() {
   return (
