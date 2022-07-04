@@ -5,17 +5,15 @@
 }
 
 .main-hero-background {
-    background: linear-gradient(180deg, rgba(20, 20, 22, 0.4) 0%, rgba(20, 20, 22, 0.9) 100%), url("../../public/background/main-hero-background.jpg");
+    background: linear-gradient(180deg, rgba(20, 20, 22, 0.6) 0%, rgba(20, 20, 22, 0.9) 100%), url("../../public/background/main-hero-background.jpg");
     background-size: cover;
     background-position: center;
-    padding: 435px var(--active-margin-grid) 320px;
+    padding: 42vh var(--active-margin-grid) 240px;
 
     .main-hero-content {
         display: flex;
-
-        .subtitle-small {
-            margin-top: 10px;
-        }
+        flex-flow: column;
+        gap: 48px;
     }
 }
 

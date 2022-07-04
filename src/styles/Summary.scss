@@ -12,9 +12,10 @@
 }
 
 .summary-1 {
-    padding-top: 120px;
     display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 96px;
     
     img {
         max-height: 100vh;
@@ -23,15 +24,15 @@
 
 .summary-2 {
 
-    &__gallery {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 40px;
+    // &__gallery {
+    //     width: 100%;
+    //     display: grid;
+    //     grid-template-columns: 1fr 2fr;
+    //     gap: 40px;
 
-        img {
-            height: 100vh;
-            object-fit: cover;
-        }
-    }
+    //     img {
+    //         height: 100vh;
+    //         object-fit: cover;
+    //     }
+    // }
 }

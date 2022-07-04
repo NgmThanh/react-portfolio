@@ -16,7 +16,8 @@
   }
 }
 
-p, .text {
+p,
+.text {
   font-family: 'Euclid Square';
   font-size: 2rem;
   font-weight: 400;
@@ -102,7 +103,20 @@ a {
   margin-right: 24px;
 }
 
-.subtitle-small, .subtitle-medium, .subtitle-large {
+.spaced-subtitle {
+  font-family: 'Euclid Square';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 132%;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: .6;
+}
+
+.subtitle-small,
+.subtitle-medium,
+.subtitle-large {
   font-family: 'Euclid Square';
   font-style: normal;
   font-weight: 500;
@@ -143,15 +157,29 @@ a {
     background: var(--col-text);
   }
 
-  &.btn span, &.underline a {
+  &.btn span,
+  &.underline a {
     width: fit-content;
     border-bottom: 1px solid var(--col-background);
     padding-bottom: 4px;
   }
 
-  &.btn.font-light span, &.underline.font-light a {
+  &.btn.font-light span,
+  &.underline.font-light a {
     border-bottom: 1px solid var(--col-text);
   }
+}
+
+.title-stroke-2 {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--col-accentuation);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title-stroke-4 {
+  color: transparent;
+  -webkit-text-stroke: 4px var(--col-accentuation);
+  -webkit-font-smoothing: antialiased;
 }
 
 .script {
@@ -278,6 +306,10 @@ a {
 
 .mt-80 {
   margin-top: 80px;
+}
+
+.mt-m-80 {
+  margin-top: -80px;
 }
 
 .mb-80 {

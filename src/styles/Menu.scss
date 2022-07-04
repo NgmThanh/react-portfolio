@@ -139,6 +139,7 @@
                 .element-menu {
                     color: transparent;
                     -webkit-text-stroke: 2px var(--col-neutral-primary);
+                    -webkit-font-smoothing: antialiased;
                 }
 
                 &:hover span.element-menu {
