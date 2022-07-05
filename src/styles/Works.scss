@@ -3,7 +3,7 @@
 // WORKS SECTION MAIN PAGE
 
 .main-works-section {
-    margin: 240px var(--active-margin-grid);
+    margin: calc(240px + 20vh) var(--active-margin-grid) 240px;
     background: var(--col-background);
     text-align: center;
 
@@ -18,10 +18,11 @@
 
 .projects-grid {
     width: 80%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--col-1);
+    gap: 120px var(--col-1);
 
     .project-container {
         height: 800px;
@@ -109,9 +110,4 @@
             color: var(--col-white);
         }
     }
-}
-
-.works-footer {
-    margin: 0 var(--active-margin-grid);
-    position: relative;
 }

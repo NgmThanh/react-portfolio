@@ -19,7 +19,7 @@
 p,
 .text {
   font-family: 'Euclid Square';
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 164%;
   letter-spacing: -0.02em;
@@ -340,6 +340,10 @@ a {
   margin-bottom: 120px;
 }
 
+.mt-160 {
+  margin-top: 160px;
+}
+
 .ml-1 {
   margin-left: var(--col-1);
 }
@@ -471,4 +475,9 @@ a {
 
 .inactive {
   display: none !important;
+}
+
+.outer-footer {
+  margin: 0 var(--active-margin-grid);
+  position: relative;
 }

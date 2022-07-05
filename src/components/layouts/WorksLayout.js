@@ -45,7 +45,7 @@ export default function WorksLayout() {
         </Slider>
       </div>
 
-      <div className="works-footer">
+      <div className="outer-footer">
         <FooterLayout />
       </div>
     </section>
