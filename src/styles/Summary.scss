@@ -5,30 +5,11 @@
     background: var(--col-white);
 }
 
-.summary-title {
-    padding: 0 var(--active-margin-grid);
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
-
-.summary-1 {
-    padding: 0 var(--active-margin-grid);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    gap: 120px;
-    
-    img {
-        max-height: 100vh;
-    }
-}
-
-.summary-2 {
+.summary-subtitle {
     padding: 0 var(--active-margin-grid);
 }
 
-.side-container {
+.floated-blurb {
     width: clamp(800px, var(--col-8), 100%);
     background: var(--col-accentuation);
     padding: 80px 96px 160px;
@@ -44,17 +25,17 @@
     &__text {
         width: clamp(300px, var(--col-4), 100%);
     }
-}
 
-.side-image {
-    position: absolute;
-    height: 72vh;
-    left: 0;
-    margin-top: 160px;
+    &__image {
+        position: absolute;
+        height: 72vh;
+        left: 0;
+        margin-top: 160px;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }

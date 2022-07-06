@@ -308,10 +308,6 @@ a {
   margin-top: 80px;
 }
 
-.mt-m-80 {
-  margin-top: -80px;
-}
-
 .mb-80 {
   margin-bottom: 80px;
 }
@@ -480,4 +476,26 @@ a {
 .outer-footer {
   margin: 0 var(--active-margin-grid);
   position: relative;
+}
+
+// REUSED CSS
+
+.title-col-blurb {
+  padding: 0 var(--active-margin-grid);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.col-blurb {
+  padding: 0 var(--active-margin-grid);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 120px;
+
+  img {
+    max-height: 100vh;
+    margin-top: -80px;
+  }
 }

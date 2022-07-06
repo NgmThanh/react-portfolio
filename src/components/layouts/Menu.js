@@ -104,7 +104,7 @@ export default function Menu() {
           <div className="menu-content">
             <div className="menu-left">
               <div className="menu-left__inner">
-                <div className="subtitle-small font-light">Menu</div>
+                <div className="spaced-subtitle font-gold">Menu</div>
                 <div>
                   <ul className="menu-pages">
                     <li className="title-fourth">

@@ -115,11 +115,11 @@
         &__inner {
             display: flex;
 
-            .subtitle-small {
+            .spaced-subtitle {
                 transform: rotate(-90deg);
                 width: fit-content;
                 height: fit-content;
-                margin-top: 44px;
+                margin-top: 24px;
             }
 
             .menu-pages li {
