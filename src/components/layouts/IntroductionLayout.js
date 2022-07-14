@@ -20,6 +20,18 @@ export default function IntroductionLayout() {
       </div>
 
       <TextSeparator />
+
+      <div className="introduction-services mb-240 font-light">
+        <div className="col-3">
+          <div className="title-fourth font-bright">Services</div>
+          <div className="mt-80 text">Always in love with code and design, i like to learn new things every day and challenge myself with new projects.</div>
+        </div>
+        <div className="services-list">
+          <div className="subtitle-medium">Branding &amp; Identity</div>
+          <div className="subtitle-medium">User Experience Research</div>
+          <div className="subtitle-medium">User Interface Design</div>
+        </div>
+      </div>
     </section>
   )
 }

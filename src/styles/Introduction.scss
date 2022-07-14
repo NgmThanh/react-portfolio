@@ -4,3 +4,21 @@
     padding-top: 240px;
     background: var(--col-background);
 }
+
+
+.introduction-services {
+    margin-left: var(--active-margin-grid);
+    margin-right: var(--active-margin-grid);
+    display: flex;
+    gap: var(--col-2);
+
+    .services-list {
+        width: 100%;
+
+        div {
+            border-top: 1px solid var(--col-neutral-primary);
+            border-bottom: 1px solid var(--col-neutral-primary);
+            padding: 80px 0;
+        }
+    }
+}
