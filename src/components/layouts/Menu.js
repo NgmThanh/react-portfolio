@@ -1,9 +1,8 @@
 import '../../styles/Menu.scss'
 import React, { useEffect } from "react";
-import FooterLayout from './FooterLayout'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../pages/Home';
-import About from '../pages/About';
+// import About from '../pages/About';
 import Works from '../pages/Works';
 import Error from '../pages/Error';
 
@@ -141,14 +140,12 @@ export default function Menu() {
                 <img src="./summary-1.jpg" alt="menu" className="col-3"></img>
               </div>
             </div>
-
-            <FooterLayout />
           </div>
         </section >
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/works" element={<Works />} />
           {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<Error />} />

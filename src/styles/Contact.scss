@@ -2,27 +2,14 @@
 
 .contact-section {
     height: 100vh;
-    padding-top: 160px;
     position: relative;
-}
 
-.contact-container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: var(--active-margin-grid);
-
-    .contact-image {
-        width: var(--col-8);
-        height: 400px;
-        background: linear-gradient(0deg, rgba(20, 20, 22, 0.2), rgba(20, 20, 22, 0.2)), url("../../public/summary-1.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-}
-
-.contact-title {
-    position: absolute;
-    left: calc(var(--col-1) + var(--active-margin-grid));
-    top: 40vh;
+    .wrapper-rolling-text {
+        white-space: nowrap;
+      }
+      .rolling-text {
+        font-size: 20rem;
+        display: inline-block;
+        padding-left: 10px;
+      }
 }

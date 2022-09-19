@@ -1,6 +1,5 @@
 import '../../styles/Works.scss'
 import Slider from "react-slick";
-import FooterLayout from './FooterLayout'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -43,10 +42,6 @@ export default function WorksLayout() {
             <img src="/summary-1.jpg" alt=""></img>
           </div>
         </Slider>
-      </div>
-
-      <div className="outer-footer">
-        <FooterLayout />
       </div>
     </section>
   )
