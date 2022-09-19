@@ -15,7 +15,6 @@
   }
 
   .rolling-text {
-    white-space: nowrap;
     display: inline-block;
     pointer-events: none;
     will-change: transform;
@@ -26,6 +25,7 @@
     height: 560px; // clamp later
     margin-left: var(--col-2);
     user-select: none;
+    z-index: 10;
   }
 
   .contact-img {
