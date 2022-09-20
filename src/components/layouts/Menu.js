@@ -2,16 +2,8 @@ import '../../styles/Menu.scss'
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../pages/Home';
-// import About from '../pages/About';
 import Works from '../pages/Works';
 import Error from '../pages/Error';
-
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-// import About from './AboutLayout';
-// import Works from './WorksLayout';
-// import Contact from './ContactLayout';
-// import App from '../App';
-// import Error from '../pages/Error';
 
 export default function Menu() {
 
@@ -27,19 +19,19 @@ export default function Menu() {
       if (prevScrollpos > currentScrollPos || window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 1) {
         menu.style.top = "0";
       } else {
-        menu.style.top = "-126px";
+        menu.style.top = "-160px";
       }
 
       prevScrollpos = currentScrollPos;
     }
 
     // Click menu event
-    const menuBtn = document.querySelector(".menu__inner--hamburger");
-    const menuLayout = document.querySelector(".menu-opened");
+    // const menuBtn = document.querySelector(".menu__inner--hamburger");
+    // const menuLayout = document.querySelector(".menu-opened");
 
-    menuBtn.onclick = () => {
-      menuLayout.classList.toggle("active")
-    }
+    // menuBtn.onclick = () => {
+    //   menuLayout.classList.toggle("active")
+    // }
 
   }, []);
 
@@ -89,9 +81,7 @@ export default function Menu() {
     // </Router>
 
     <section>
-
-      <Router>
-        <nav id="menu" className="menu">
+      {/* <nav id="menu" className="menu">
           <div className="menu__inner">
             <div className="menu__inner--hamburger"><div className="hamburger-icon"></div><span>Menu</span></div>
             <div className="menu__inner--logo"><Link to="/">M<span className="logo-mid font-gold">T</span>H</Link></div>
@@ -141,16 +131,25 @@ export default function Menu() {
               </div>
             </div>
           </div>
-        </section >
+        </section > */}
 
+      <Router>
+        <nav id="menu" className="menu">
+          <div className="menu__inner font-white">
+            <div className="menu__inner--logo"><Link to="/">MT</Link></div>
+            <div className="menu__inner--links">
+              <span className="text"><a href="#works-home">Work</a></span>
+              <span className="text">About</span>
+              <span className="text"><a href="#contact">Contact</a></span>
+            </div>
+          </div>
+        </nav>
+        
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/works" element={<Works />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
-
       </Router>
 
     </section >

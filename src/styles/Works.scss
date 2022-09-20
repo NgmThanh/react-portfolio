@@ -1,111 +1,109 @@
 @import "mixins";
 
-// WORKS SECTION MAIN PAGE
+// WORKS SECTION HOME PAGE
 
-.main-works-section {
-    margin: calc(240px + 20vh) var(--active-margin-grid) 240px;
-    background: var(--col-background);
-    text-align: center;
-
-    .title-third {
-        margin-top: 40px;
-    }
-
-    .btn {
-        display: inline-block;
-    }
+.home-works-section {
+  height: 100vh;
+  background: var(--col-dark);
+  text-align: center;
+  overscroll-behavior: none;
+  width: 200%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid grey;
 }
 
-.projects-grid {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 120px var(--col-1);
-
-    .project-container {
-        height: 800px;
-        background: var(--col-accentuation);
-        position: relative;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .project-title {
-            position: absolute;
-            left: 40px;
-            bottom: 40px;
-        }
-    }
-    
-    .project-left {
-        margin-top: 240px;
-    }
+.works-title {
+  text-align: left;
+  position: absolute;
+  width: calc(100% - 2*(var(--active-margin-grid)));
+  top: 80px;
+  left: var(--active-margin-grid);
+  z-index: 2;
 }
 
-// WORKS SECTION PROJECTS PAGE
+.work-slider {
+  height: 80vh;
+  width: 100%;
+  padding-left: var(--active-margin-grid);
+  padding-top: 96px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 64px;
+
+  .work-content {
+    width: var(--col-4);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 32px;
+
+    .work-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(80%);
+    }
+
+    .work-description {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+
+      .work-title {
+        font-size: 3.2rem;
+        font-weight: 410;
+        line-height: 164%;
+        letter-spacing: -0.04em;
+      }
+
+      .work-detail {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.panel {
+  overscroll-behavior: none;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.panel.red {
+  background-color: red;
+}
+
+.panel.orange {
+  background-color: orange;
+}
+
+.panel.purple {
+  background-color: purple;
+}
+
+.panel.green {
+  background-color: green;
+}
+
+.panel.gray {
+  background-color: gray;
+}
+
+// WORKS SECTION INNER PAGE
 
 .works-section {
-    width: 100%;
-    height: 100vh;
-}
-
-.works-content {
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .slick-slider {
-        height: 540px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        div {
-            height: 100%;
-            position: relative;
-        }
-
-        .slick-slide img {
-            height: 100%;
-            width: var(--col-5);
-            object-fit: cover;
-            margin: auto;
-        }
-
-        .slick-dots {
-            width: fit-content;
-            bottom: initial;
-            right: 25%;
-        }
-
-        .slick-dots li {
-            display: block;
-            width: 24px;
-            height: 24px;
-            margin: 0;
-        }
-
-        .slick-dots .slick-active > button:before {
-            font-size: 8px;
-        }
-
-        .slick-dots button {
-            width: 24px;
-            height: 24px;
-        }
-
-        .slick-dots button:before {      
-            width: 24px;
-            height: 24px;
-            color: var(--col-white);
-        }
-    }
+  width: 100%;
+  height: 100vh;
 }

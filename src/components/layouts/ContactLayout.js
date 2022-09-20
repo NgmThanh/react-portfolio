@@ -1,5 +1,5 @@
 import "../../styles/Contact.scss"
-import React, { Component, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 
@@ -25,7 +25,7 @@ export default function ContactLayout() {
 
       const roll1 = roll(".rolling-text", { duration: 10 });
       const roll2 = roll(".rollingText02", { duration: 10 }, true);
-      const scroll = ScrollTrigger.create({
+      ScrollTrigger.create({
         onUpdate(self) {
           if (self.direction !== direction) {
             direction *= -1;
@@ -116,9 +116,9 @@ export default function ContactLayout() {
 
         <div className="links">
           <div className="link-title text">Socials</div>
-          <div className="link text hover-underline-animation"><a href="https://dribbble.com/">Dribbble</a></div>
-          <div className="link text hover-underline-animation"><a href="https://dribbble.com/">Instagram</a></div>
-          <div className="link text hover-underline-animation"><a href="https://dribbble.com/">LinkedIn</a></div>
+          <div className="link text hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">Dribbble</a></div>
+          <div className="link text hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">Instagram</a></div>
+          <div className="link text hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">LinkedIn</a></div>
         </div>
 
         <div className="links">
@@ -129,7 +129,7 @@ export default function ContactLayout() {
         </div>
       </div>
 
-      <div className="text designed-by">Designed by Minh Thanh.</div>
+      <div className="text designed-by font-dark">Designed by Minh Thanh.</div>
     </section>
   )
 }

@@ -20,7 +20,7 @@ p,
 .text {
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
-  font-weight: 440;
+  font-weight: 410;
   line-height: 164%;
   letter-spacing: -0.04em;
   font-variation-settings: 'slnt' 0;
@@ -69,6 +69,7 @@ a {
 
 .title-home,
 .title-200,
+.title-160,
 .title-120,
 .title-96,
 .title-32 {
@@ -81,12 +82,12 @@ a {
   z-index: 1;
 }
 
-.title-home {
-  font-size: 30rem; //to change 100% width
-}
-
 .title-200 {
   font-size: 20rem;
+}
+
+.title-160 {
+  font-size: 16rem;
 }
 
 .title-120 {

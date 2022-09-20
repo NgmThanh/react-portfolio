@@ -7,28 +7,13 @@ import Menu from './layouts/Menu';
 export default function App() {
 
   useEffect(() => {
-    // Menu behavior event
-    // When the user scrolls down, hide the navbar. When the user scrolls up or is on bottom of page, show the navbar
-    let prevScrollpos = window.pageYOffset;
-    const menu = document.getElementById("menu");
-
-    window.onscroll = () => {
-      let currentScrollPos = window.pageYOffset;
-
-      if (prevScrollpos > currentScrollPos || window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 1) {
-        menu.style.top = "0";
-      } else {
-        menu.style.top = "-100px";
-      }
-
-      prevScrollpos = currentScrollPos;
-    }
 
     // SmoothScroll for websites 
-    // Source : https://github.com/gblazex/smoothscroll-for-websites
+    // source : https://github.com/gblazex/smoothscroll-for-websites
     SmoothScroll({ stepSize: 60, animationTime: 800 })
 
     // GSAP custom cursor
+    // source : https://dev.to/baydezigner/custom-cursor-with-greensock-in-5-minutes-4he7
     gsap.set('.cursor', { xPercent: -50, yPercent: -50 });
     gsap.set('.follower', { xPercent: -50, yPercent: -50 });
 
@@ -42,20 +27,20 @@ export default function App() {
 
     // page transition handler
     // source : https://codepen.io/kylops/pen/PzZjXz
-    const buttons = document.querySelectorAll(".button");
+    // const buttons = document.querySelectorAll(".button");
 
-    buttons.forEach(button => {
-      button.onclick = () => {
-        console.log("transition")
-        var id = button.getAttribute("id");
-        var layerClass = "." + id + "-layer";
-        var layers = document.querySelectorAll(layerClass);
+    // buttons.forEach(button => {
+    //   button.onclick = () => {
+    //     console.log("transition")
+    //     var id = button.getAttribute("id");
+    //     var layerClass = "." + id + "-layer";
+    //     var layers = document.querySelectorAll(layerClass);
 
-        for (const layer of layers) {
-          layer.classList.toggle("active");
-        }
-      }
-    })
+    //     for (const layer of layers) {
+    //       layer.classList.toggle("active");
+    //     }
+    //   }
+    // })
   }, []);
 
   return (
