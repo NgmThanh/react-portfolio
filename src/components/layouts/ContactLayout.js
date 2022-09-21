@@ -1,4 +1,5 @@
-import "../../styles/Contact.scss"
+import "../../styles/Contact.scss";
+import contactImage from "../../images/contact-image.jpg"
 import React, { useEffect } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
@@ -102,7 +103,7 @@ export default function ContactLayout() {
   }, []);
 
   return (
-    <section id="contact" className="contact-section">
+    <section id="contact" className="contact-section" data-scroll-section>
       <div className="wrapper-rolling-text">
         <div className="rolling-text title-200">
           <span>Get in touch · Get in touch ·&nbsp;</span>
@@ -111,7 +112,7 @@ export default function ContactLayout() {
 
       <div className="mid-container">
         <div className="contact-img-container">
-          <img src="./images/contact-image.jpg" alt="contact" className="contact-img"></img>
+          <img src={contactImage} alt="contact" className="contact-img"></img>
         </div>
 
         <div className="links">

@@ -9,6 +9,7 @@
     "FitText-UMD": "^1.0.0",
     "flickity": "^2.3.0",
     "gsap": "^3.10.4",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",

@@ -10,20 +10,20 @@ export default function App() {
 
     // SmoothScroll for websites 
     // source : https://github.com/gblazex/smoothscroll-for-websites
-    SmoothScroll({ stepSize: 60, animationTime: 800 })
+    // SmoothScroll({ stepSize: 60, animationTime: 800 })
 
     // GSAP custom cursor
     // source : https://dev.to/baydezigner/custom-cursor-with-greensock-in-5-minutes-4he7
-    gsap.set('.cursor', { xPercent: -50, yPercent: -50 });
-    gsap.set('.follower', { xPercent: -50, yPercent: -50 });
+    // gsap.set('.cursor', { xPercent: -50, yPercent: -50 });
+    // gsap.set('.follower', { xPercent: -50, yPercent: -50 });
 
-    var cur = document.querySelector('.cursor');
-    var follow = document.querySelector('.follower');
+    // var cur = document.querySelector('.cursor');
+    // var follow = document.querySelector('.follower');
 
-    window.addEventListener('mousemove', e => {
-      gsap.to(cur, .1, { x: e.clientX, y: e.clientY });
-      gsap.to(follow, .6, { x: e.clientX, y: e.clientY });
-    });
+    // window.addEventListener('mousemove', e => {
+    //   gsap.to(cur, .1, { x: e.clientX, y: e.clientY });
+    //   gsap.to(follow, .6, { x: e.clientX, y: e.clientY });
+    // });
 
     // page transition handler
     // source : https://codepen.io/kylops/pen/PzZjXz
