@@ -1,5 +1,5 @@
 import "../../styles/Contact.scss";
-import contactImage from "../../images/contact-image.jpg"
+import contactImage from "../../images/contact-image-thumbnail.jpg"
 import React, { useEffect } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
@@ -112,7 +112,7 @@ export default function ContactLayout() {
 
       <div className="mid-container">
         <div className="contact-img-container">
-          <img src={contactImage} alt="contact" className="contact-img"></img>
+          <img src={contactImage} alt="contact" className="contact-img" data-scroll></img>
         </div>
 
         <div className="links">

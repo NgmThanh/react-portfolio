@@ -1,7 +1,5 @@
 import '../styles/App.scss';
 import React, { useEffect } from 'react';
-import SmoothScroll from 'smoothscroll-for-websites';
-import { gsap } from "gsap";
 import Menu from './layouts/Menu';
 
 export default function App() {

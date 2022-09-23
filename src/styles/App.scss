@@ -331,3 +331,11 @@ a {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.lineParent {
+  overflow: hidden;
+}
+
+.lineChildren {
+  transform: translate3d(0, 200px, 0);
+}

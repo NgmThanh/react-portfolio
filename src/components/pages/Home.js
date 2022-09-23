@@ -1,7 +1,7 @@
 import HeroLayout from '../layouts/HeroLayout';
 import WorksHomeLayout from '../layouts/WorksHomeLayout';
 import ContactLayout from '../layouts/ContactLayout';
-import useLocoScroll from '../Hooks/useLocoScroll';
+import useLocoScroll from '../hooks/useLocoScroll';
 
 export default function Home() {
 
