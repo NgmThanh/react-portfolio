@@ -1,7 +1,7 @@
-import '../../styles/Hero.scss';
+import './Hero.scss';
 import { useEffect } from 'react';
 import gsap from 'gsap';
-import SplitText from '../utils/SplitText3.min.js'
+import SplitText from '../../utils/SplitText3.min.js'
 
 export default function HeroLayout() {
 

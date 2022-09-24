@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.2",
     "FitText-UMD": "^1.0.0",
-    "flickity": "^2.3.0",
     "gsap": "^3.10.4",
     "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
@@ -16,10 +15,7 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "react-slick": "^0.29.0",
     "sass": "^1.51.0",
-    "slick-carousel": "^1.8.1",
-    "smoothscroll-for-websites": "^1.4.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

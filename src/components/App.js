@@ -1,6 +1,6 @@
 import '../styles/App.scss';
 import React, { useEffect } from 'react';
-import Menu from './layouts/Menu';
+import Menu from './Menu/Menu';
 
 export default function App() {
 

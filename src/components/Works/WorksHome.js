@@ -1,9 +1,9 @@
-import '../../styles/Works.scss';
+import './Works.scss';
 import { useEffect, useRef, useState } from 'react';
 import gsap from "gsap";
 import cn from 'classnames';
-import SplitText from '../utils/SplitText3.min.js'
-import useOnScreen from '../hooks/useOnScreen';
+import SplitText from '../../utils/SplitText3.min.js';
+import useOnScreen from '../../hooks/useOnScreen';
 
 export default function WorksHomeLayout() {
   const ref = useRef(null);
