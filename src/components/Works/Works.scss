@@ -36,10 +36,10 @@
   padding-top: 96px;
   display: flex;
   flex-flow: row nowrap;
-  gap: 64px;
+  gap: 96px;
 
   .work-content {
-    width: var(--col-4);
+    width: var(--col-5);
     height: 100%;
     display: flex;
     flex-flow: column;
@@ -126,4 +126,75 @@
 .works-section {
   width: 100%;
   height: 100vh;
+}
+
+.next-work-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  // background: var(--col-white);
+
+  .next-work-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.4);
+    position: absolute;
+  }
+
+  .mid-container {
+    width: 100%;
+    z-index: 2;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .next-work-container {
+    width: fit-content;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    cursor: pointer;
+  }
+
+  .next-work-img-container {
+    width: var(--col-3);
+    height: 560px; // clamp later
+    user-select: none;
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path .8s var(--custom-ease-out);
+
+    &.is-reveal {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+
+    .next-work-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .links {
+    position: absolute;
+    left: var(--active-margin-grid);
+    bottom: 80px;
+    z-index: 10;
+
+    .link-title {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .link {
+      cursor: pointer;
+      width: fit-content;
+      margin-bottom: 8px;
+    }
+  }
 }

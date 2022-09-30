@@ -138,9 +138,9 @@ export default function Menu() {
           <div className="menu__inner font-white">
             <div className="menu__inner--logo"><Link to="/">MT</Link></div>
             <div className="menu__inner--links">
-              <span className="text"><a href="#works-home">Work</a></span>
-              <span className="text">About</span>
-              <span className="text"><a href="#contact">Contact</a></span>
+              <span className="text font-white font-weight-400 hover-underline-animation"><a href="#works-home">Work</a></span>
+              <span className="text font-white font-weight-400 hover-underline-animation">About</span>
+              <span className="text font-white font-weight-400 hover-underline-animation"><a href="#contact">Contact</a></span>
             </div>
           </div>
         </nav>

@@ -7,18 +7,10 @@
   align-items: center;
   background: var(--col-white);
 
-  .wrapper-rolling-text {
-    white-space: nowrap;
-    position: absolute;
-    top: 50vh;
-    transform: translateY(-50%);
-    user-select: none;
-  }
-
-  .rolling-text {
-    display: inline-block;
-    pointer-events: none;
-    will-change: transform;
+  .mid-container {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--col-1);
   }
 
   .contact-img-container {
@@ -39,12 +31,6 @@
     &.is-reveal {
       clip-path: inset(0% 0% 0% 0%);
     }
-  }
-
-  .mid-container {
-    display: flex;
-    align-items: flex-end;
-    gap: var(--col-1);
   }
 
   .links {

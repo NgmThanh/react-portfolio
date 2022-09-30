@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import SplitText from '../../utils/SplitText3.min.js'
 
-export default function HeroLayout() {
+export default function Hero() {
 
   useEffect(() => {
     // --------------------------------------------------------

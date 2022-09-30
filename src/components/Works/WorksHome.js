@@ -5,7 +5,7 @@ import cn from 'classnames';
 import SplitText from '../../utils/SplitText3.min.js';
 import useOnScreen from '../../hooks/useOnScreen';
 
-export default function WorksHomeLayout() {
+export default function WorksHome() {
   const ref = useRef(null);
 
   const [reveal, setReveal] = useState(false);

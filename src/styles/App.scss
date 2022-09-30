@@ -59,6 +59,10 @@ a {
   color: var(--col-neutral-grey);
 }
 
+.font-weight-400 {
+  font-weight: 400;
+}
+
 .text-right {
   text-align: right;
 }
@@ -308,10 +312,25 @@ a {
   display: none !important;
 }
 
-// Animations
+// Rolling Text
+.wrapper-rolling-text {
+  white-space: nowrap;
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  user-select: none;
+}
 
+.rolling-text {
+  display: inline-block;
+  pointer-events: none;
+  will-change: transform;
+}
+
+// Animations
 .hover-underline-animation {
   position: relative;
+  cursor: pointer;
 }
 
 .hover-underline-animation:after {
@@ -325,6 +344,14 @@ a {
   background-color: var(--col-dark);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
+}
+
+.font-white.hover-underline-animation:after {
+  background-color: var(--col-white);
+}
+
+.font-white-grey.hover-underline-animation:after {
+  background-color: var(--col-white-grey);
 }
 
 .hover-underline-animation:hover:after {
