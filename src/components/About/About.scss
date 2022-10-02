@@ -1,73 +1,52 @@
 @import "../../styles/mixins";
 
-// .about-section {
-//     width: 100%;
-// }
+.about-section {
+  background: var(--col-dark);
+  width: 100%;
+  padding: 200px var(--active-margin-grid);
+}
 
-// .about-background {
-//     height: 100vh;
-//     background: linear-gradient(180deg, #141416 10.75%, rgba(20, 20, 22, 0.4) 50%, #141416 100%), url("../../public/background/milad-fakurian-_S-zZyQiOr8-unsplash.jpg");
-//     background-size: cover;
-// }
+.about-row {
+  display: flex;
+  flex-flow: row;
+  gap: 32px;
+}
 
-// .about-title {
-//     padding: 0 var(--active-margin-grid);
-//     height: 100vh;
-//     display: flex;
-//     flex-flow: column nowrap;
-//     justify-content: center;
-//     position: relative;
+.about-col {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
 
-//     &__subtitle {
-//         top: calc(25% - 120px);
-//     }
-// }
+.quote-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
 
-// .about-description {
-//     padding: 0 var(--active-margin-grid);
+.quote {
+  font-family: 'SangBleu Empire';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128%;
+  letter-spacing: -0.02em;
+  font-size: 8rem;
+  text-align: center;
+}
 
-//     &__flex_content {
-//         display: flex;
-//         gap: 32px;
+.quote-author {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 164%;
+  letter-spacing: -0,04em;
+  color: var(--col-white-grey);
+  text-align: center;
+}
 
-//         p {
-//             margin-top: 200px;
-//         }
-//     }
-
-//     &__canvas {
-//         height: 80vh;
-
-//         img {
-//             height: 100%;
-//         }
-//     }
-// }
-
-// .about-process {
-//     padding: 0 var(--active-margin-grid);
-//     display: grid;
-//     grid-template-columns: var(--col-2) 1fr;
-
-//     &__item:first-child {
-//         border-top: 1px solid var(--col-neutral-primary)  ;
-//     }
-
-//     &__item {
-//         padding: 80px 0;
-//         border-bottom: 1px solid var(--col-neutral-primary);
-//         display: grid;
-//         gap: 24px;
-//         grid-template-columns: 1fr 1fr;
-
-//         @include tablet-screen() {
-//             grid-template-columns: 1fr;
-//         }
-
-//         &--title {
-//             font-size: 2.4rem;
-//             color: var(--col-white);
-//             text-transform: uppercase;
-//         }
-//     }
-// }
+.lys-flower {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}

@@ -366,3 +366,19 @@ a {
 .lineChildren {
   transform: translate3d(0, 200px, 0);
 }
+
+.side-subtitle {
+  width: var(--col-2);
+  height: fit-content;
+  position: relative;
+}
+
+.side-subtitle::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: var(--col-white-grey);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
