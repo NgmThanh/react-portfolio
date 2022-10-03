@@ -20,6 +20,6 @@ export default function Home() {
       <WorksHome />
       <Contact />
       {/* <NextWork /> */}
-    </main>
+    </main>  
   )
 }

@@ -139,6 +139,14 @@ a {
   clear: both;
 }
 
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
 .mt-80 {
   margin-top: 80px;
 }
@@ -373,7 +381,7 @@ a {
   position: relative;
 }
 
-.side-subtitle::after {
+.font-white-grey.side-subtitle::after {
   content: "";
   width: 40px;
   height: 2px;
@@ -381,4 +389,24 @@ a {
   position: absolute;
   left: 0;
   bottom: -8px;
+}
+
+.font-dark.side-subtitle::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: var(--col-dark);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
 }
