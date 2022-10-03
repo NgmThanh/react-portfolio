@@ -1,0 +1,11 @@
+@import "../../styles/mixins";
+
+.services-section {
+  width: 100%;
+}
+
+.services-row {
+  display: flex;
+  flex-flow: row;
+  gap: 32px;
+}

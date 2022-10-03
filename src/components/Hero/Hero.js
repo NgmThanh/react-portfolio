@@ -36,7 +36,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="main-hero-section" data-scroll-section>
-      <h1 id="hero-title" className="font-white">
+      <h1 id="hero-title" className="font-white" data-scroll data-scroll-speed="1">
         <span className="title-32">Creative Design</span><br></br><span className="title-home">Experiences</span>
       </h1>
 

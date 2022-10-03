@@ -21,7 +21,7 @@ export default function About() {
       <div className="col-8 quote-container mb-80">
         <div className="quote font-white mt-120">“Every great design begins with an even better story.”</div>
         <div className="quote-author">Lorinda Mamo</div>
-        <img src={lysFlower} alt="lys flower" className="lys-flower"></img>
+        <img src={lysFlower} alt="lys flower" className="lys-flower" data-scroll></img>
       </div>
     </section>
   )
