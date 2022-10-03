@@ -20,10 +20,11 @@
     width: var(--col-7)
   }
 
-  ul li {
+  ul li.services-accordion {
     padding: 48px 0;
     list-style-type: none;
     border-top: 1px solid var(--col-white-grey);
+    cursor: pointer;
 
     &:last-child {
       border-bottom: 1px solid var(--col-white-grey);
@@ -34,7 +35,7 @@
       justify-content: space-between;
 
       .flex-row {
-        align-items: flex-start;  
+        align-items: flex-start;
         gap: var(--col-1);
         padding-right: var(--col-1);
 
@@ -58,11 +59,20 @@
         }
       }
     }
-    
+
     .services-description {
-      margin-top: 16px;
-      font-size: 1.6rem;
       color: var(--col-neutral);
+      font-size: 1.6rem;
+      font-weight: 410;
+      line-height: 164%;
+      letter-spacing: -0.04em;
+      font-variation-settings: 'slnt' 0;
+
+      // WIP accordion
+      // margin-top: 16px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
     }
   }
 }

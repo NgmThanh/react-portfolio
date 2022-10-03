@@ -1,6 +1,28 @@
+import { useEffect } from 'react';
 import './Services.scss';
 
 export default function Services() {
+  useEffect(() => {
+    // WIP accordion
+    let acc = document.getElementsByClassName("services-accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let content = document.querySelector(".services-description");
+        console.log(content)
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          console.log("click")
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  }, []);
+
+
   return (
     <section id="services" className="services-section" data-scroll-section>
       <div className="services-row mb-80">
@@ -13,7 +35,7 @@ export default function Services() {
 
       <div className="services-list mt-120">
         <ul>
-          <li>
+          <li className="services-accordion">
             <div className="services-space-between">
               <div className="flex-row">
                 <p className="services-number">01</p>
@@ -26,7 +48,7 @@ export default function Services() {
             </div>
           </li>
 
-          <li>
+          <li className="services-accordion">
             <div className="services-space-between">
               <div className="flex-row">
                 <p className="services-number">02</p>
@@ -39,7 +61,7 @@ export default function Services() {
             </div>
           </li>
 
-          <li>
+          <li className="services-accordion">
             <div className="services-space-between">
               <div className="flex-row">
                 <p className="services-number">03</p>

@@ -2,20 +2,19 @@
 
 .main-hero-section,
 .about-hero-section {
-    width: 100%;
+	width: 100%;
 }
 
 .main-hero-section {
-    background: linear-gradient(180deg, rgba(20, 20, 22, 0) 80.8%, #141416 100%), url("../../images/hero-background.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    padding: 46vh var(--active-margin-grid) 0;
+	background: linear-gradient(180deg, rgba(20, 20, 22, 0) 80.8%, #141416 100%), url("../../images/hero-background.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	padding: 46vh var(--active-margin-grid) 0;
 }
 
 .scroll-text {
-    position: absolute;
-    bottom: 80px;
-    right: var(--active-margin-grid);
+	position: absolute;
+	bottom: 80px;
+	right: var(--active-margin-grid);
 }
-
