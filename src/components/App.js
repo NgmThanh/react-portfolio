@@ -8,15 +8,13 @@ export default function App() {
 
   useEffect(() => {
     // check if font is loaded before rolling text
-    const font = new FontFace("SangBleu Empire", "url(fonts/SangBleuEmpire-Regular.otf)", {
+    const font = new FontFace("SangBleu Empire", "url(fonts/SangBleuEmpire-Regular.ttf)", {
       style: "normal",
       weight: "400",
     });
 
-    document.fonts.add(font);
-    font.load();
-
-    document.fonts.ready.then(() => {
+    font.load().then(function(loaded_face) {
+      // loaded_face holds the loaded FontFace
       // --------------------------------------------------------
       // Rolling text
       // https://codepen.io/GreenSock/pen/QWqoKBv?editors=0010
@@ -68,7 +66,17 @@ export default function App() {
 
         return tl;
       }
+    }).catch(function(error) {
+      // error occurred
+      console.log("ERROR : Loading font");
     });
+
+    // document.fonts.add(font);
+    // font.load();
+
+    // document.fonts.ready.then(() => {
+      
+    // });
 
     // page transition handler
     // source : https://codepen.io/kylops/pen/PzZjXz

@@ -4,8 +4,22 @@ import gsap from "gsap";
 import cn from 'classnames';
 import SplitText from '../../utils/SplitText3.min.js';
 import useOnScreen from '../../hooks/useOnScreen';
+import axios from 'axios';
 
 export default function WorksHome() {
+
+  const [error, setError] = useState(null);
+  const [works, setWorks] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:1337/api/projects')
+      .then(({ data }) => setWorks(data.data))
+      .catch((error) => setError(error));
+  }, [])
+
+  // --------------------------------------------------------
+
   const ref = useRef(null);
 
   const [reveal, setReveal] = useState(false);
@@ -39,47 +53,66 @@ export default function WorksHome() {
     }
   }, [reveal]);
 
-  const thumbnailWork1 = require('../../images/real-estate-exterior-thumbnail.jpg');
-  const thumbnailWork2 = require('../../images/real-estate-interior-thumbnail.jpg');
-  const thumbnailWork3 = require('../../images/real-estate-exterior-thumbnail.jpg');
-  const thumbnailWork4 = require('../../images/real-estate-exterior-thumbnail.jpg');
+  // Object.keys(works).forEach((index) => {
+  //   console.log(works[index].attributes.name)
+  // })
+  // const thumbnailWork1 = require('../../images/real-estate-exterior-thumbnail.jpg');
+  // const thumbnailWork2 = require('../../images/real-estate-interior-thumbnail.jpg');
+  // const thumbnailWork3 = require('../../images/real-estate-exterior-thumbnail.jpg');
+  // const thumbnailWork4 = require('../../images/real-estate-exterior-thumbnail.jpg');
 
-  const works = [
-    {
-      "title": "Self Branding",
-      "thumbnail": thumbnailWork1,
-      "detail": "UI / UX Design, Development",
-    },
-    {
-      "title": "HD Assistante",
-      "thumbnail": thumbnailWork2,
-      "detail": "UI / UX Design",
-    },
-    {
-      "title": "Real Estate",
-      "thumbnail": thumbnailWork3,
-      "detail": "UI / UX Design, Development",
-    },
+  // const works = [
+  //   {
+  //     "title": "Self Branding",
+  //     "thumbnail": thumbnailWork1,
+  //     "detail": "UI / UX Design, Development",
+  //   },
+  //   {
+  //     "title": "HD Assistante",
+  //     "thumbnail": thumbnailWork2,
+  //     "detail": "UI / UX Design",
+  //   },
+  //   {
+  //     "title": "Real Estate",
+  //     "thumbnail": thumbnailWork3,
+  //     "detail": "UI / UX Design, Development",
+  //   },
 
-    {
-      "title": "Project 4",
-      "thumbnail": thumbnailWork4,
-      "detail": "UI / UX Design",
-    }
-  ]
+  //   {
+  //     "title": "Project 4",
+  //     "thumbnail": thumbnailWork4,
+  //     "detail": "UI / UX Design",
+  //   }
+  // ]
 
-  const workSliderContent = works.map((work, key) =>
-    <div className="work-content" key={key}>
+  const workSliderContent = Object.keys(works).forEach((index) => {
+    <div className="work-content" key={index}>
       <div className="work-canvas">
-        <img className={cn("work-image", { "is-reveal": reveal })} src={work.thumbnail} alt={work.title}></img>
+        <img className={cn("work-image", { "is-reveal": reveal })} src={""} alt={works[index].attributes.name}></img>
       </div>
       <div className="work-description">
-        <h3 className="work-title font-white">{work.title}</h3>
-        <p className="work-detail font-neutral text">{work.detail}</p>
+        <h3 className="work-title font-white">{works[index].attributes.name}</h3>
+        <p className="work-detail font-neutral text">{[works[index].attributes.category]}</p>
       </div>
     </div>
-  )
+  })
 
+  // const workSliderContent = works.map((work, key) =>
+  //   <div className="work-content" key={key}>
+  //     <div className="work-canvas">
+  //       <img className={cn("work-image", { "is-reveal": reveal })} src={work.thumbnail} alt={work.name}></img>
+  //     </div>
+  //     <div className="work-description">
+  //       <h3 className="work-title font-white">{work.name}</h3>
+  //       <p className="work-detail font-neutral text">{work.detail}</p>
+  //     </div>
+  //   </div>
+  // )
+
+  if (error) {
+    // Print errors if any
+    return <div>An error occured: {error.message}</div>;
+  }
   // --------------------------------------------------------
   // FitText-UMD
   // source : https://www.npmjs.com/package/FitText-UMD
