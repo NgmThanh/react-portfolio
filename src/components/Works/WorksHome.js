@@ -85,7 +85,7 @@ export default function WorksHome() {
   //   }
   // ]
 
-  const workSliderContent = Object.keys(works).forEach((index) => {
+  const workSliderContent = Object.keys(works).map((index) => {
     <div className="work-content" key={index}>
       <div className="work-canvas">
         <img className={cn("work-image", { "is-reveal": reveal })} src={""} alt={works[index].attributes.name}></img>
