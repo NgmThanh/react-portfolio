@@ -7,7 +7,7 @@
   left: 0;
   z-index: 999;
   background: transparent;
-  padding: 64px var(--active-margin-grid);
+  padding: 40px var(--active-margin-grid);
   transition: all 0.3s var(--custom-ease-in);
 
   &__inner {
@@ -15,100 +15,98 @@
     justify-content: space-between;
     user-select: none;
 
-    &--logo {
-      font-family: 'SangBleu Empire';
-      font-style: normal;
-      font-size: 2.4rem;
-      line-height: 128%;
+    &--logo img {
+      max-height: 32px;
     }
 
     &--links {
+      margin-top: 8px;
       display: flex;
       gap: 80px;
     }
   }
 }
 
-.menu-opened {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  background: var(--col-background);
-}
+// .menu-opened {
+//   width: 100%;
+//   height: 100%;
+//   position: fixed;
+//   display: none;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 10;
+//   background: var(--col-background);
+// }
 
-.menu-content {
-  height: 100%;
-  position: relative;
-  margin: 0 var(--active-margin-grid);
-  display: flex;
+// .menu-content {
+//   height: 100%;
+//   position: relative;
+//   margin: 0 var(--active-margin-grid);
+//   display: flex;
 
-  .menu-left {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+//   .menu-left {
+//     width: 50%;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
 
-    &__inner {
-      display: flex;
+//     &__inner {
+//       display: flex;
 
-      .spaced-subtitle {
-        transform: rotate(-90deg);
-        width: fit-content;
-        height: fit-content;
-        margin-top: 24px;
-      }
+//       .spaced-subtitle {
+//         transform: rotate(-90deg);
+//         width: fit-content;
+//         height: fit-content;
+//         margin-top: 24px;
+//       }
 
-      .menu-pages li {
-        margin: 24px;
+//       .menu-pages li {
+//         margin: 24px;
 
-        a.active {
-          span.element-menu {
-            -webkit-text-stroke: 0;
-            color: var(--col-accentuation);
-          }
+//         a.active {
+//           span.element-menu {
+//             -webkit-text-stroke: 0;
+//             color: var(--col-accentuation);
+//           }
 
-          .nb-hover-menu {
-            display: inline-block;
-          }
-        }
+//           .nb-hover-menu {
+//             display: inline-block;
+//           }
+//         }
 
-        .element-menu {
-          color: transparent;
-          -webkit-text-stroke: 2px var(--col-neutral-primary);
-          -webkit-font-smoothing: antialiased;
-        }
+//         .element-menu {
+//           color: transparent;
+//           -webkit-text-stroke: 2px var(--col-neutral-primary);
+//           -webkit-font-smoothing: antialiased;
+//         }
 
-        &:hover span.element-menu {
-          color: var(--col-white);
-          -webkit-text-stroke: 0;
-        }
-      }
-    }
-  }
+//         &:hover span.element-menu {
+//           color: var(--col-white);
+//           -webkit-text-stroke: 0;
+//         }
+//       }
+//     }
+//   }
 
-  .menu-right {
-    width: 50%;
-    height: 100%;
-    position: relative;
+//   .menu-right {
+//     width: 50%;
+//     height: 100%;
+//     position: relative;
 
-    &__inner {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+//     &__inner {
+//       width: 100%;
+//       height: 100%;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
 
-      img {
-        height: 680px;
-        object-fit: cover;
-      }
-    }
-  }
-}
+//       img {
+//         height: 680px;
+//         object-fit: cover;
+//       }
+//     }
+//   }
+// }

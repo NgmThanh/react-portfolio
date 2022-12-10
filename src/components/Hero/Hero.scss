@@ -6,15 +6,36 @@
 }
 
 .main-hero-section {
-	background: linear-gradient(180deg, rgba(20, 20, 22, 0) 80.8%, #141416 100%), url("../../images/hero-background.jpg");
+	background: linear-gradient(180deg, rgba(33, 33, 33, 0) 75%, #212121 100%), url("../../images/hero-background.jpg"), radial-gradient(50% 128% at 50% 50%, #2D2D2D 0%, #101010 100%), linear-gradient(180deg, #2D2D2D 0%, #101010 42.19%, #101010 58.33%, #2D2D2D 100%);
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
-	padding: 42vh var(--active-margin-grid) 0;
+	padding: 36vh var(--active-margin-grid) 0;
+
+	h1#hero-title {
+		position: relative;
+	}
+
+	.hero-image {
+		width: 460px;
+		height: auto;
+		aspect-ratio: 2/3;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 }
 
 .scroll-text {
 	position: absolute;
-	bottom: 80px;
+	bottom: 40px;
 	right: var(--active-margin-grid);
 }

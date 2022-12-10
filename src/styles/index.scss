@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root {
-  --col-dark: #141416;
-  --col-dark-grey: #2E2E30;
   --col-white: #F6F6F6;
   --col-white-grey: #C6C6C6;
-  --col-neutral: #5C5C5E;
-  --col-neutral-grey: #808080;
+  --col-neutral: #767676;
+  --col-dark-grey: #212121;
+  --col-dark: #101010;
 
   --active-margin-grid: 80px;
 
@@ -23,17 +22,6 @@
     --active-margin-grid: 24px;
   }
 
-  --vw: calc(100vw - var(--active-margin-grid) * 2);
-  --vh: 100vh;
-  --col-1: 7.6vw;
-  --col-2: 15.2vw;
-  --col-3: 22.8vw;
-  --col-4: 30.4vw;
-  --col-5: 38vw;
-  --col-6: 45.6vw;
-  --col-7: 53.2vw;
-  --col-8: 60.8vw;
-
   --custom-ease-in: cubic-bezier(.56, .23, .52, 1);
   --custom-ease-out: cubic-bezier(.24, .74, .24, .99);
   --custom-ease-in-out: cubic-bezier(.42, 0, .31, 1);
@@ -42,9 +30,30 @@
 }
 
 @font-face {
-  font-family: "SangBleu Empire";
-  src: url("../fonts/SangBleuEmpire-Regular.ttf");
+  font-family: "Humane";
+  src: url("../fonts/Humane-Regular.ttf");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Humane";
+  src: url("../fonts/Humane-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Humane";
+  src: url("../fonts/Humane-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Humane";
+  src: url("../fonts/Humane-Bold.ttf");
+  font-weight: 700;
   font-style: normal;
 }
 

@@ -8,7 +8,7 @@ export default function App() {
 
   useEffect(() => {
     // check if font is loaded before rolling text
-    const font = new FontFace("SangBleu Empire", "url(fonts/SangBleuEmpire-Regular.ttf)", {
+    const font = new FontFace("Humane", "url(fonts/Humane-Regular.ttf)", {
       style: "normal",
       weight: "400",
     });
@@ -101,12 +101,12 @@ export default function App() {
       <div id="cursor" className="cursor"></div>
       <div className="follower"></div>
 
-      <div className="transition-layer">
+      {/* <div className="transition-layer">
         <div className="bottom-layer">
           <div className="bottom-layer bottom-layer--2"></div>
           <div className="bottom-layer bottom-layer--3"></div>
         </div>
-      </div>
+      </div> */}
 
       <Menu />
     </div>

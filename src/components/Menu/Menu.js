@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../../pages/Home';
 import Works from '../Works/InnerWorks';
 import Error from '../../pages/Error';
+import logo from "../../images/logo.svg";
 
 export default function Menu() {
 
@@ -19,7 +20,7 @@ export default function Menu() {
       if (prevScrollpos > currentScrollPos || window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 1) {
         menu.style.top = "0";
       } else {
-        menu.style.top = "-160px";
+        menu.style.top = "-120px";
       }
 
       prevScrollpos = currentScrollPos;
@@ -135,16 +136,20 @@ export default function Menu() {
 
       <Router>
         <nav id="menu" className="menu">
-          <div className="menu__inner font-white">
-            <div className="menu__inner--logo"><Link to="/">MT</Link></div>
+          <div className="menu__inner">
+            <div className="menu__inner--logo">
+              <Link to="/">
+                <img src={logo} alt="MT. Logo"/>
+              </Link>
+            </div>
             <div className="menu__inner--links">
-              <span className="text font-white font-weight-400 hover-underline-animation"><a href="#works-home">Work</a></span>
-              <span className="text font-white font-weight-400 hover-underline-animation"><a href="#about">About</a></span>
-              <span className="text font-white font-weight-400 hover-underline-animation"><a href="#contact">Contact</a></span>
+              <span className="text font-white hover-underline-animation"><a href="#works-home">Works</a></span>
+              <span className="text font-white hover-underline-animation"><a href="#about">About</a></span>
+              <span className="text font-white hover-underline-animation"><a href="#contact">Contact</a></span>
             </div>
           </div>
         </nav>
-        
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/works" element={<Works />} />

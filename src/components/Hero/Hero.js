@@ -2,6 +2,7 @@ import './Hero.scss';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import SplitText from '../../utils/SplitText3.min.js'
+import hero from "../../images/hero.jpg";
 
 export default function Hero() {
 
@@ -11,10 +12,10 @@ export default function Hero() {
     // source : https://www.npmjs.com/package/FitText-UMD
     var fitText = require("FitText-UMD");
     // fit text with magic number
-    fitText(document.querySelector(".title-home"), 0.58);
+    fitText(document.querySelector(".title-hero"), 0.41);
 
-    // --------------------------------------------------------
-    // Text appear animation
+    // // --------------------------------------------------------
+    // // Text appear animation
     const split = new SplitText("#hero-title", {
       type: "lines",
       linesClass: "lineChildren",
@@ -35,12 +36,20 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="main-hero-section" data-scroll-section>
-      <h1 id="hero-title" className="font-white" data-scroll data-scroll-speed="3">
-        <span className="title-32">Creative Design</span><br></br><span className="title-home">Experiences</span>
+    <section id="home" className="main-hero-section">
+      <div className="text text-24 font-neutral mb-32 ml-1">I'm a</div>
+
+      <h1 id="hero-title" className="font-white text-center title title-hero">
+        <span>Creative Designer</span>
       </h1>
 
-      <div className="text scroll-text font-white-grey">Scroll to explore</div>
+      <div className="text text-24 font-neutral ml-1">From France</div>
+
+      <div className="hero-image">
+        <img src={hero} alt="hero"></img>
+      </div>
+
+      <div className="text scroll-text font-white">Scroll to explore</div>
     </section>
   )
 }

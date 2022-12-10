@@ -53,42 +53,10 @@ export default function WorksHome() {
     }
   }, [reveal]);
 
-  // Object.keys(works).forEach((index) => {
-  //   console.log(works[index].attributes.name)
-  // })
-  // const thumbnailWork1 = require('../../images/real-estate-exterior-thumbnail.jpg');
-  // const thumbnailWork2 = require('../../images/real-estate-interior-thumbnail.jpg');
-  // const thumbnailWork3 = require('../../images/real-estate-exterior-thumbnail.jpg');
-  // const thumbnailWork4 = require('../../images/real-estate-exterior-thumbnail.jpg');
-
-  // const works = [
-  //   {
-  //     "title": "Self Branding",
-  //     "thumbnail": thumbnailWork1,
-  //     "detail": "UI / UX Design, Development",
-  //   },
-  //   {
-  //     "title": "HD Assistante",
-  //     "thumbnail": thumbnailWork2,
-  //     "detail": "UI / UX Design",
-  //   },
-  //   {
-  //     "title": "Real Estate",
-  //     "thumbnail": thumbnailWork3,
-  //     "detail": "UI / UX Design, Development",
-  //   },
-
-  //   {
-  //     "title": "Project 4",
-  //     "thumbnail": thumbnailWork4,
-  //     "detail": "UI / UX Design",
-  //   }
-  // ]
-
   const workSliderContent = Object.keys(works).map((index) => {
-    <div className="work-content" key={index}>
+    return <div className="work-content" key={index}>
       <div className="work-canvas">
-        <img className={cn("work-image", { "is-reveal": reveal })} src={""} alt={works[index].attributes.name}></img>
+        <img className={cn("work-image", { "is-reveal": reveal })} src={"../../images/home-separator.jpg"} alt={works[index].attributes.name}></img>
       </div>
       <div className="work-description">
         <h3 className="work-title font-white">{works[index].attributes.name}</h3>
@@ -96,18 +64,6 @@ export default function WorksHome() {
       </div>
     </div>
   })
-
-  // const workSliderContent = works.map((work, key) =>
-  //   <div className="work-content" key={key}>
-  //     <div className="work-canvas">
-  //       <img className={cn("work-image", { "is-reveal": reveal })} src={work.thumbnail} alt={work.name}></img>
-  //     </div>
-  //     <div className="work-description">
-  //       <h3 className="work-title font-white">{work.name}</h3>
-  //       <p className="work-detail font-neutral text">{work.detail}</p>
-  //     </div>
-  //   </div>
-  // )
 
   if (error) {
     // Print errors if any
