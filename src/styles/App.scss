@@ -71,7 +71,6 @@ a {
   font-family: 'Humane';
   font-style: normal;
   font-weight: 500;
-  line-height: 88%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   display: block;
@@ -80,6 +79,7 @@ a {
 
 .title-hero {
   font-size: 45rem;
+  line-height: 88%;
 }
 
 .title-contact {
@@ -88,6 +88,10 @@ a {
 
 .title-section {
   font-size: 22rem;
+}
+
+.title-works {
+  font-size: 32rem;
 }
 
 .title-description {

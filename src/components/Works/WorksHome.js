@@ -4,22 +4,8 @@ import gsap from "gsap";
 import cn from 'classnames';
 import SplitText from '../../utils/SplitText3.min.js';
 import useOnScreen from '../../hooks/useOnScreen';
-import axios from 'axios';
 
 export default function WorksHome() {
-
-  const [error, setError] = useState(null);
-  const [works, setWorks] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get('http://localhost:1337/api/projects')
-      .then(({ data }) => setWorks(data.data))
-      .catch((error) => setError(error));
-  }, [])
-
-  // --------------------------------------------------------
-
   const ref = useRef(null);
 
   const [reveal, setReveal] = useState(false);
@@ -53,68 +39,60 @@ export default function WorksHome() {
     }
   }, [reveal]);
 
-  const workSliderContent = Object.keys(works).map((index) => {
-    return <div className="work-content" key={index}>
-      <div className="work-canvas">
-        <img className={cn("work-image", { "is-reveal": reveal })} src={"../../images/home-separator.jpg"} alt={works[index].attributes.name}></img>
-      </div>
-      <div className="work-description">
-        <h3 className="work-title font-white">{works[index].attributes.name}</h3>
-        <p className="work-detail font-neutral text">{[works[index].attributes.category]}</p>
-      </div>
+  const thumbnailWork1 = require('../../images/projects/Self-branding.jpg');
+  const thumbnailWork2 = require('../../images/projects/HD-assistante.jpg');
+  const thumbnailWork3 = require('../../images/projects/RE-management.jpg');
+  const thumbnailWork4 = require('../../images/projects/Lol-universe.jpg');
+
+  const works = [
+    {
+      "title": "Self Branding",
+      "thumbnail": thumbnailWork1,
+      "detail": "UI / UX Design, Development",
+      "link": "https://www.behance.net/gallery/158897383/Creative-Designer-Portfolio",
+    },
+    {
+      "title": "HD Assistante",
+      "thumbnail": thumbnailWork2,
+      "detail": "UI / UX Design",
+      "link": "https://www.behance.net/gallery/158436257/HD-Assistante-Website",
+    },
+    {
+      "title": "Real Estate",
+      "thumbnail": thumbnailWork3,
+      "detail": "UI / UX Design",
+      "link": "https://www.behance.net/gallery/156839471/Real-Estate-Management-Interface",
+    },
+
+    {
+      "title": "LOL Universe",
+      "thumbnail": thumbnailWork4,
+      "detail": "UI / UX Design",
+      "link": "https://www.behance.net/gallery/156836453/League-of-Legends-Universe",
+    }
+  ]
+
+  const workSliderContent = works.map((work, key) =>
+    <div className="work-content" key={key}>
+      <a href={work.link} target="_blank" rel="noreferrer">
+        <div className="work-canvas">
+          <img className={cn("work-image", { "is-reveal": reveal })} src={work.thumbnail} alt={work.title}></img>
+        </div>
+        <div className="work-description">
+          <h3 className="text-24 font-white">{work.title}</h3>
+          <p className="work-detail font-neutral text">{work.detail}</p>
+        </div>
+      </a>
     </div>
-  })
-
-  if (error) {
-    // Print errors if any
-    return <div>An error occured: {error.message}</div>;
-  }
-  // --------------------------------------------------------
-  // FitText-UMD
-  // source : https://www.npmjs.com/package/FitText-UMD
-  // var fitText = require("FitText-UMD");
-  // fit text with magic number
-  // fitText(document.querySelector(".works-title"), 2.2);
-
-  // gsap.registerPlugin(ScrollTrigger);
-
-  // let sections = gsap.utils.toArray(".panel");
-
-  // gsap.to(sections, {
-  //   xPercent: -100 * (sections.length - 1),
-  //   ease: "none",
-  //   scrollTrigger: {
-  //     trigger: ".home-works-section",
-  //     start: "top top",
-  //     end: "+=3000",
-  //     pin: true,
-  //     scrub: 1,
-  //   }
-  // });
+  )
 
   return (
     <section id="works-home" className={cn("home-works-section", { "is-reveal": reveal })} data-scroll-section>
-      <h2 ref={ref} id="works-title" className={cn("works-title title-160 font-white", { "is-reveal": reveal })}>Recent Work</h2>
+      <h2 ref={ref} id="works-title" className={cn("works-title title title-works font-white", { "is-reveal": reveal })}>Recent Work</h2>
 
       <div className="work-slider">
         {workSliderContent}
       </div>
-
-      {/* <section className="panel red">
-        ONE
-      </section>
-      <section className="panel orange">
-        TWO
-      </section>
-      <section className="panel purple">
-        THREE
-      </section>
-      <section className="panel green">
-        FOUR
-      </section>
-      <section className="panel gray">
-        FIVE
-      </section> */}
     </section>
   )
 }
