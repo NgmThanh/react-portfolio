@@ -36,7 +36,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="main-hero-section">
+    <section id="home" className="main-hero-section" data-scroll-section>
       <div className="text text-24 font-neutral mb-32 ml-1">I'm a</div>
 
       <h1 id="hero-title" className="font-white text-center title title-hero">

@@ -5,18 +5,20 @@
   position: relative;
   display: flex;
   align-items: center;
-  background: var(--col-white);
+  background: var(--col-dark-grey);
 
   .mid-container {
     display: flex;
     align-items: flex-end;
-    gap: var(--col-1);
+    gap: 80px;
   }
 
   .contact-img-container {
-    width: var(--col-3);
-    height: 560px; // clamp later
-    margin-left: var(--col-2);
+    width: 460px;
+		height: auto;
+		aspect-ratio: 2/3;
+    margin-left: 16vw;
+    margin-right: 80px;
     user-select: none;
     z-index: 10;
   }
@@ -34,21 +36,22 @@
   }
 
   .links {
+    margin-bottom: 40px;
+    
     .link-title {
       font-size: 1.6rem;
       color: var(--col-neutral);
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
     .link {
       cursor: pointer;
       width: fit-content;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
   }
 
   .designed-by {
-    font-size: 1.6rem;
     position: absolute;
     left: var(--active-margin-grid);
     bottom: 40px;

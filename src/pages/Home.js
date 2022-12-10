@@ -4,7 +4,7 @@ import Hero from '../components/Hero/Hero';
 // import SeparatorImage from '../components/SeparatorImage/SeparatorImage';
 // import Services from '../components/Services/Services';
 // import WorksHome from '../components/Works/WorksHome';
-// import Contact from '../components/Contact/Contact';
+import Contact from '../components/Contact/Contact';
 // import NextWork from '../components/Works/NextWork';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       {/* <SeparatorImage /> */}
       {/* <Services /> */}
       {/* <WorksHome /> */}
-      {/* <Contact /> */}
+      <Contact />
       {/* <NextWork /> */}
     </main>  
   )

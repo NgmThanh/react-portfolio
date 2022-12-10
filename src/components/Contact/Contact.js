@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import contactImage from "../../images/contact-image-thumbnail.jpg"
+import contactImage from "../../images/contact.jpg"
 import React, { useEffect } from 'react';
 
 export default function Contact() {
@@ -40,7 +40,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section" data-scroll-section>
       <div className="wrapper-rolling-text">
-        <div className="rolling-text title-200">
+        <div className="rolling-text font-white title title-contact">
           <span>Get in touch · Get in touch ·&nbsp;</span>
         </div>
       </div>
@@ -52,20 +52,20 @@ export default function Contact() {
 
         <div className="links">
           <div className="link-title text">Socials</div>
-          <div className="link text hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">Dribbble</a></div>
-          <div className="link text hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">Instagram</a></div>
-          <div className="link text hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+          <div className="link text font-white hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">Dribbble</a></div>
+          <div className="link text font-white hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">Instagram</a></div>
+          <div className="link text font-white hover-underline-animation"><a href="https://dribbble.com/" target="_blank" rel="noreferrer">LinkedIn</a></div>
         </div>
 
         <div className="links">
           <div className="link-title text">Contact</div>
-          <div className="link text hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
-          <div className="link text hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
-          <div className="link text hover-underline-animation">&#8205;</div>
+          <div className="link text font-white hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
+          <div className="link text font-white hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
+          <div className="link text font-white hover-underline-animation">&#8205;</div>
         </div>
       </div>
 
-      <div className="text designed-by font-dark">Designed by Minh Thanh.</div>
+      <div className="text designed-by font-white">Designed by Minh Thanh.</div>
     </section>
   )
 }
