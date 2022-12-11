@@ -1,10 +1,10 @@
 import './Menu.scss'
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from '../../pages/Home';
 import Works from '../Works/InnerWorks';
 import Error from '../../pages/Error';
 import logo from "../../images/logo.svg";
+import Home from '../../pages/Home';
 
 export default function Menu() {
 

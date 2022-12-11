@@ -15,12 +15,6 @@
   top: 16vh;
   left: var(--active-margin-grid);
   z-index: 2;
-  opacity: 0;
-  transition: opacity .8s var(--custom-ease-out);
-
-  &.is-reveal {
-    opacity: 1;
-  }
 }
 
 .work-slider {
@@ -54,15 +48,7 @@
       height: 100%;
       object-fit: cover;
       filter: brightness(80%);
-      clip-path: inset(100% 0% 0% 0%);
-      transition: clip-path .8s var(--custom-ease-out);
       transition: all .8s var(--custom-ease-out);
-      // scale: 1.2;
-
-      &.is-reveal {
-        clip-path: inset(0% 0% 0% 0%);
-        // scale: 1;
-      }
     }
 
     .work-description {
@@ -134,10 +120,6 @@
     // clip-path: inset(100% 0% 0% 0%);
     transition: clip-path .8s var(--custom-ease-out);
     overflow: hidden;
-
-    &.is-reveal {
-      clip-path: inset(0% 0% 0% 0%);
-    }
 
     .next-work-img {
       width: 100%;

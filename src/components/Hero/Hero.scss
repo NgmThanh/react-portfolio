@@ -10,14 +10,14 @@
 	background-size: cover;
 	background-position: center;
 	height: 100vh;
-	padding: 36vh var(--active-margin-grid) 0;
+	padding: 32vh var(--active-margin-grid) 0;
 
 	h1#hero-title {
 		position: relative;
 	}
 
 	.hero-image {
-		width: 460px;
+		width: 24vw;
 		height: auto;
 		aspect-ratio: 2/3;
 		position: absolute;
@@ -25,6 +25,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 0;
+		filter: drop-shadow(10px 20px 40px rgba(0, 0, 0, 0.25));
 
 		img {
 			width: 100%;
@@ -35,7 +36,7 @@
 }
 
 .scroll-text {
-	position: absolute;
+	position: absolute !important;
 	bottom: 40px;
 	right: var(--active-margin-grid);
 }

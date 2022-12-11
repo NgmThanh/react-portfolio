@@ -4,16 +4,18 @@
   height: 72vh;
   width: 100%;
   position: relative;
-  background: var(--col-dark-grey);
+  // background: var(--col-dark-grey);
 }
 
 .separator-container {
   height: 100%;
   height: 100%;
+  position: relative;
 }
 
 .separator-image {
   width: 100%;
-  height: 130%;
+  height: 100%;
+  // height: 130%;
   object-fit: cover;
 }

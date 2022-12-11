@@ -1,7 +1,7 @@
 import './Hero.scss';
 import { useEffect } from 'react';
-import gsap from 'gsap';
-import SplitText from '../../utils/SplitText3.min.js'
+// import gsap from 'gsap';
+// import SplitText from '../../utils/SplitText3.min.js'
 import hero from "../../images/hero.jpg";
 
 export default function Hero() {
@@ -12,34 +12,34 @@ export default function Hero() {
     // source : https://www.npmjs.com/package/FitText-UMD
     var fitText = require("FitText-UMD");
     // fit text with magic number
-    fitText(document.querySelector(".title-hero"), 0.41);
+    fitText(document.querySelector(".title-hero"), 0.39);
 
     // // --------------------------------------------------------
     // // Text appear animation
-    const split = new SplitText("#hero-title", {
-      type: "lines",
-      linesClass: "lineChildren",
-    });
+    // const split = new SplitText("#hero-titl e", {
+    //   type: "lines",
+    //   linesClass: "lineChildren",
+    // });
 
-    new SplitText("#hero-title", {
-      type: "lines",
-      linesClass: "lineParent",
-    });
+    // new SplitText("#hero-title", {
+    //   type: "lines",
+    //   linesClass: "lineParent",
+    // });
 
-    gsap.to(split.lines, {
-      duration: .8,
-      y: 0,
-      opacity: 1,
-      stagger: 0.1,
-      ease: "var(--custom-ease-out)",
-    });
+    // gsap.to(split.lines, {
+    //   duration: .8,
+    //   y: 0,
+    //   opacity: 1,
+    //   stagger: 0.1,
+    //   ease: "var(--custom-ease-out)",
+    // });
   }, []);
 
   return (
     <section id="home" className="main-hero-section" data-scroll-section>
       <div className="text text-24 font-neutral mb-32 ml-1">I'm a</div>
 
-      <h1 id="hero-title" className="font-white text-center title title-hero">
+      <h1 id="hero-title" className="font-white text-center title title-hero" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4">
         <span>Creative Designer</span>
       </h1>
 
@@ -49,7 +49,7 @@ export default function Hero() {
         <img src={hero} alt="hero"></img>
       </div>
 
-      <div className="text scroll-text font-white">Scroll to explore</div>
+      <div className="scroll-text text font-white">Scroll to explore</div>
     </section>
   )
 }

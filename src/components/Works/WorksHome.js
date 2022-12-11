@@ -1,43 +1,32 @@
 import './Works.scss';
-import { useEffect, useRef, useState } from 'react';
-import gsap from "gsap";
-import cn from 'classnames';
-import SplitText from '../../utils/SplitText3.min.js';
-import useOnScreen from '../../hooks/useOnScreen';
+import { useEffect, useRef } from 'react';
+// import gsap from "gsap";
+// import SplitText from '../../utils/SplitText3.min.js';
 
 export default function WorksHome() {
   const ref = useRef(null);
 
-  const [reveal, setReveal] = useState(false);
-  const onScreen = useOnScreen(ref);
-
   useEffect(() => {
-    if (onScreen) setReveal(onScreen);
-  }, [onScreen]);
+    // --------------------------------------------------------
+    // Text appear animation
+    // const split = new SplitText("#works-title", {
+    //   type: "lines",
+    //   linesClass: "lineChildren",
+    // });
 
-  useEffect(() => {
-    if (reveal) {
-      // --------------------------------------------------------
-      // Text appear animation
-      const split = new SplitText("#works-title", {
-        type: "lines",
-        linesClass: "lineChildren",
-      });
+    // new SplitText("#works-title", {
+    //   type: "lines",
+    //   linesClass: "lineParent",
+    // });
 
-      new SplitText("#works-title", {
-        type: "lines",
-        linesClass: "lineParent",
-      });
-
-      gsap.to(split.lines, {
-        duration: 1,
-        y: -20,
-        opacity: 1,
-        stagger: 0.1,
-        ease: "var(--custom-ease-out)",
-      });
-    }
-  }, [reveal]);
+    // gsap.to(split.lines, {
+    //   duration: 1,
+    //   y: -20,
+    //   opacity: 1,
+    //   stagger: 0.1,
+    //   ease: "var(--custom-ease-out)",
+    // });
+  }, []);
 
   const thumbnailWork1 = require('../../images/projects/Self-branding.jpg');
   const thumbnailWork2 = require('../../images/projects/HD-assistante.jpg');
@@ -76,7 +65,7 @@ export default function WorksHome() {
     <div className="work-content" key={key}>
       <a href={work.link} target="_blank" rel="noreferrer">
         <div className="work-canvas">
-          <img className={cn("work-image", { "is-reveal": reveal })} src={work.thumbnail} alt={work.title}></img>
+          <img className="work-image" src={work.thumbnail} alt={work.title}></img>
         </div>
         <div className="work-description">
           <h3 className="text-24 font-white">{work.title}</h3>
@@ -87,8 +76,8 @@ export default function WorksHome() {
   )
 
   return (
-    <section id="works-home" className={cn("home-works-section", { "is-reveal": reveal })} data-scroll-section>
-      <h2 ref={ref} id="works-title" className={cn("works-title title title-works font-white", { "is-reveal": reveal })}>Recent Work</h2>
+    <section id="works-home" className="home-works-section" data-scroll-section>
+      <h2 ref={ref} id="works-title" className="works-title title title-works font-white" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">Recent Works</h2>
 
       <div className="work-slider">
         {workSliderContent}

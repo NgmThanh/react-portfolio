@@ -1,10 +1,13 @@
-import '../styles/App.scss';
-import React, { useEffect } from 'react';
 import Menu from './Menu/Menu';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import '../styles/App.scss';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 export default function App() {
+
+  const containerRef = useRef(null);
 
   useEffect(() => {
     // page transition handler
@@ -76,19 +79,54 @@ export default function App() {
     }
   }, []);
 
-  return (
-    <div className="App">
-      <div id="cursor" className="cursor"></div>
-      <div className="follower"></div>
+  useEffect(() => {
+    // Locomotive Anchor Scroll
+    // source : https://github.com/locomotivemtl/locomotive-scroll/issues/175
+    const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
 
-      {/* <div className="transition-layer">
+    anchorLinks.forEach((anchorLink) => {
+      let hashval = anchorLink.getAttribute('href');
+      let target = document.querySelector(hashval);
+
+      anchorLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        LocomotiveScrollProvider.scrollTo(target);
+      });
+    });
+  }, []);
+
+  return (
+    <LocomotiveScrollProvider
+      options={
+        {
+          smooth: true,
+          multiplier: .8, 
+        }
+      }
+      watch={
+        [
+          //..all the dependencies you want to watch to update the scroll.
+          //  Basicaly, you would want to watch page/location changes
+          //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+        ]
+      }
+      containerRef={containerRef}
+    >
+      <main id="main-container" className="App" ref={containerRef}>
+        <div id="cursor" className="cursor"></div>
+        <div className="follower"></div>
+
+        <Menu />
+
+        {/* <div className="transition-layer">
         <div className="bottom-layer">
           <div className="bottom-layer bottom-layer--2"></div>
           <div className="bottom-layer bottom-layer--3"></div>
         </div>
       </div> */}
-
-      <Menu />
-    </div>
+      </main>
+    </LocomotiveScrollProvider>
   );
 }

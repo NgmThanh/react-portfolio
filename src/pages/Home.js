@@ -1,25 +1,19 @@
-import useLocoScroll from '../hooks/useLocoScroll';
 import Hero from '../components/Hero/Hero';
-// import About from '../components/About/About';
+import AboutWorks from '../components/About/About-works';
 import SeparatorImage from '../components/SeparatorImage/SeparatorImage';
-// import Services from '../components/Services/Services';
+import AboutInstagram from '../components/About/About-instagram';
 import WorksHome from '../components/Works/WorksHome';
 import Contact from '../components/Contact/Contact';
-// import NextWork from '../components/Works/NextWork';
 
 export default function Home() {
-
-  useLocoScroll();
-
   return (
-    <main id="main-container">
+    <section data-scroll-container>
       <Hero />
-      {/* <About /> */}
+      <AboutWorks />
       <SeparatorImage />
-      {/* <Services /> */}
+      <AboutInstagram />
       <WorksHome />
       <Contact />
-      {/* <NextWork /> */}
-    </main>  
+    </section>
   )
 }
