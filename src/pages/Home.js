@@ -6,8 +6,9 @@ import WorksHome from '../components/Works/WorksHome';
 import Contact from '../components/Contact/Contact';
 
 export default function Home() {
+
   return (
-    <section data-scroll-container>
+    <section>
       <Hero />
       <AboutWorks />
       <SeparatorImage />

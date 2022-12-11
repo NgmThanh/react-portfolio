@@ -9,6 +9,24 @@ export default function App() {
 
   const containerRef = useRef(null);
 
+  // useEffect(() => {
+  //   // Locomotive Anchor Scroll
+  //   // source : https://github.com/locomotivemtl/locomotive-scroll/issues/175
+  //   const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
+
+  //   anchorLinks.forEach((anchorLink) => {
+  //     let hashval = anchorLink.getAttribute('href');
+  //     let target = document.querySelector(hashval);
+
+  //     anchorLink.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       e.stopPropagation();
+
+  //       scroll.scrollTo(target);
+  //     });
+  //   });
+  // }, []);
+
   useEffect(() => {
     // page transition handler
     // source : https://codepen.io/kylops/pen/PzZjXz
@@ -79,31 +97,13 @@ export default function App() {
     }
   }, []);
 
-  useEffect(() => {
-    // Locomotive Anchor Scroll
-    // source : https://github.com/locomotivemtl/locomotive-scroll/issues/175
-    const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
-
-    anchorLinks.forEach((anchorLink) => {
-      let hashval = anchorLink.getAttribute('href');
-      let target = document.querySelector(hashval);
-
-      anchorLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        LocomotiveScrollProvider.scrollTo(target);
-      });
-    });
-  }, []);
-
   return (
     <LocomotiveScrollProvider
       options={
         {
           smooth: true,
           multiplier: .8,
-          lerp: .08, 
+          lerp: .08,
         }
       }
       watch={
@@ -115,7 +115,7 @@ export default function App() {
       }
       containerRef={containerRef}
     >
-      <main id="main-container" className="App" ref={containerRef}>
+      <main id="main-container" className="App" ref={containerRef} data-scroll-container>
         <div id="cursor" className="cursor"></div>
         <div className="follower"></div>
 

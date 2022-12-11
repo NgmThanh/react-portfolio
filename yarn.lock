@@ -8664,6 +8664,11 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
+"textfit@^2.4.0":
+  "integrity" "sha512-/x4aoY5+/tJmu+iwpBH1yw75TFp86M6X15SvaaY/Eep7YySQYtqdOifEtfvVyMwzl7SZ+G4RQw00FD9g5R6i1Q=="
+  "resolved" "https://registry.npmjs.org/textfit/-/textfit-2.4.0.tgz"
+  "version" "2.4.0"
+
 "throat@^6.0.1":
   "integrity" "sha512-8hmiGIJMDlwjg7dlJ4yKGLK8EsYqKgPWbG3b4wjJddKNwc7N7Dpn08Df4szr/sZdMVeOstrdYSsqzX6BYbcB+w=="
   "resolved" "https://registry.npmjs.org/throat/-/throat-6.0.1.tgz"

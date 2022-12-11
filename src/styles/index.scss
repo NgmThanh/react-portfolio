@@ -10,9 +10,9 @@
 
   --active-margin-grid: 80px;
 
-  // @include small-screen() {
-  //   --active-margin-grid: 32px;
-  // }
+  @include small-screen() {
+    --active-margin-grid: 32px;
+  }
 
   @include tablet-screen() {
     --active-margin-grid: 32px;

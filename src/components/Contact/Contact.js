@@ -27,14 +27,16 @@ export default function Contact() {
       el.style.transform = transforms.apply(null, xyEl);
     }
 
-    mouseOverContainer.onmousemove = function (e) {
-      let xy = [e.clientX, e.clientY];
-      let position = xy.concat([layer]);
+    if (matchMedia('(pointer:fine)').matches) {
+      mouseOverContainer.onmousemove = function (e) {
+        let xy = [e.clientX, e.clientY];
+        let position = xy.concat([layer]);
 
-      window.requestAnimationFrame(function () {
-        transformElement(layer, position);
-      });
-    };
+        window.requestAnimationFrame(function () {
+          transformElement(layer, position);
+        });
+      };
+    }
   }, []);
 
   return (
@@ -47,21 +49,23 @@ export default function Contact() {
 
       <div className="mid-container">
         <div className="contact-img-container">
-          <img src={contactImage} alt="contact" className="contact-img" data-scroll data-scroll-speed="-1" data-scroll-target=".contact-img-container"></img>
+          <img src={contactImage} alt="contact" className="contact-img"></img>
         </div>
 
-        <div className="links">
-          <div className="link-title text">Socials</div>
-          <div className="link text font-white hover-underline-animation"><a href="https://www.behance.net/minhthanhnguyen3/" target="_blank" rel="noreferrer">Behance</a></div>
-          <div className="link text font-white hover-underline-animation"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></div>
-          <div className="link text font-white hover-underline-animation"><a href="https://www.linkedin.com/in/ngmthanh/" target="_blank" rel="noreferrer">LinkedIn</a></div>
-        </div>
+        <div className="links-container">
+          <div className="links">
+            <div className="link-title text">Socials</div>
+            <div className="link text font-white hover-underline-animation"><a href="https://www.behance.net/minhthanhnguyen3/" target="_blank" rel="noreferrer">Behance</a></div>
+            <div className="link text font-white hover-underline-animation"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></div>
+            <div className="link text font-white hover-underline-animation"><a href="https://www.linkedin.com/in/ngmthanh/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+          </div>
 
-        <div className="links">
-          <div className="link-title text">Contact</div>
-          <div className="link text font-white hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
-          <div className="link text font-white hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
-          <div className="link text font-white hover-underline-animation">&#8205;</div>
+          <div className="links">
+            <div className="link-title text">Contact</div>
+            <div className="link text font-white hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
+            <div className="link text font-white hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
+            <div className="link text font-white hover-underline-animation">&#8205;</div>
+          </div>
         </div>
       </div>
 

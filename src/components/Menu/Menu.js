@@ -11,20 +11,20 @@ export default function Menu() {
   useEffect(() => {
     // Menu behavior event
     // When the user scrolls down, hide the navbar. When the user scrolls up or is on bottom of page, show the navbar
-    let prevScrollpos = window.pageYOffset;
-    const menu = document.getElementById("menu");
+    // let prevScrollpos = window.pageYOffset;
+    // const menu = document.getElementById("menu");
 
-    window.onscroll = () => {
-      let currentScrollPos = window.pageYOffset;
+    // window.onscroll = () => {
+    //   let currentScrollPos = window.pageYOffset;
 
-      if (prevScrollpos > currentScrollPos || window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 1) {
-        menu.style.top = "0";
-      } else {
-        menu.style.top = "-120px";
-      }
+    //   if (prevScrollpos > currentScrollPos || window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 1) {
+    //     menu.style.top = "0";
+    //   } else {
+    //     menu.style.top = "-120px";
+    //   }
 
-      prevScrollpos = currentScrollPos;
-    }
+    //   prevScrollpos = currentScrollPos;
+    // }
 
     // Click menu event
     // const menuBtn = document.querySelector(".menu__inner--hamburger");

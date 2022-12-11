@@ -26,12 +26,27 @@ p,
   letter-spacing: -0.04em;
   z-index: 1;
   position: relative;
+
+  @include small-screen() {
+    font-size: 1.8rem;
+  }
+
+  @include tablet-screen() {
+    font-size: 1.6rem;
+  }
 }
 
 .text-24 {
   font-size: 2.4rem;
   font-weight: 500;
 
+  @include small-screen() {
+    font-size: 2rem;
+  }
+
+  @include tablet-screen() {
+    font-size: 1.6rem;
+  }
 }
 
 a {
@@ -78,26 +93,65 @@ a {
 }
 
 .title-hero {
-  font-size: 45rem;
-  line-height: 88%;
+  // font-size: clamp(24rem, 24vw, 45rem);
+  font-size: 22vw;
+    text-align: left;
+    // line-height: 88%;
+
+  @include small-screen() {
+    font-size: clamp(20rem, 22vw, 22vw);
+    text-align: left;
+  }
 }
 
 .title-contact {
-  font-size: 45rem;
+  font-size: clamp(24rem, 24vw, 45rem);
+
+  @include small-screen() {
+    font-size: clamp(20rem, 24vw, 32rem);
+  }
 }
 
 .title-section {
   font-size: 22rem;
   line-height: 88%;
+
+  @include large-screen() {
+    font-size: 18rem;
+  }
+
+  @include tablet-screen() {
+    font-size: 16rem;
+  }
+
+  @include mobile-screen() {
+    font-size: 12rem;
+  }
 }
 
 .title-works {
   font-size: 32rem;
+
+  @include large-screen() {
+    font-size: 24rem;
+  }
+
+  @include small-screen() {
+    font-size: 18rem;
+  }
+
+  @include mobile-screen() {
+    font-size: 12rem;
+  }
 }
 
 .title-description {
   font-size: 8rem;
-  width: 24vw;
+  width: clamp(400px, 24vw, 24vw);
+
+  @include tablet-screen() {
+    width: 100%;
+  }
 }
 
 /* ========== CURSOR ========== */
@@ -135,6 +189,10 @@ a {
 
 .mt-24 {
   margin-top: 24px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
 }
 
 .mt-32 {
@@ -183,6 +241,66 @@ a {
 
 .mb-320 {
   margin-bottom: 320px;
+}
+
+.small-ml-0 {
+  @include small-screen() {
+    margin-left: 0 !important;
+  }
+}
+
+.small-mr-0 {
+  @include small-screen() {
+    margin-right: 0 !important;
+  }
+}
+
+.small-mt-0 {
+  @include small-screen() {
+    margin-top: 0 !important;
+  }
+}
+
+.small-mb-0 {
+  @include small-screen() {
+    margin-bottom: 0 !important;
+  }
+}
+
+.small-m-0 {
+  @include small-screen() {
+    margin: 0 !important;
+  }
+}
+
+.tablet-ml-0 {
+  @include tablet-screen() {
+    margin-left: 0 !important;
+  }
+}
+
+.tablet-mr-0 {
+  @include tablet-screen() {
+    margin-right: 0 !important;
+  }
+}
+
+.tablet-mt-0 {
+  @include tablet-screen() {
+    margin-top: 0 !important;
+  }
+}
+
+.tablet-mb-0 {
+  @include tablet-screen() {
+    margin-bottom: 0 !important;
+  }
+}
+
+.tablet-m-0 {
+  @include tablet-screen() {
+    margin: 0 !important;
+  }
 }
 
 .ml-1 {
@@ -281,6 +399,54 @@ a {
   margin-right: 93.6vw;
 }
 
+.pr-1 {
+  padding-right: 7.8vw;
+}
+
+.pr-2 {
+  padding-right: 15.6vw;
+}
+
+.pr-3 {
+  padding-right: 23.4vw;
+}
+
+.pr-4 {
+  padding-right: 31.2vw;
+}
+
+.pr-5 {
+  padding-right: 39vw;
+}
+
+.pr-6 {
+  padding-right: 46.8vw;
+}
+
+.pr-7 {
+  padding-right: 54.6vw;
+}
+
+.pr-8 {
+  padding-right: 62.4vw;
+}
+
+.pr-9 {
+  padding-right: 70.2vw;
+}
+
+.pr-10 {
+  padding-right: 78vw;
+}
+
+.pr-11 {
+  padding-right: 85.8vw;
+}
+
+.pr-12 {
+  padding-right: 93.6vw;
+}
+
 // .transition-layer {
 //   position: sticky;
 //   width: 100%;
@@ -333,6 +499,10 @@ a {
   top: 46vh;
   transform: translateY(-50%);
   user-select: none;
+
+  @include small-screen() {
+    top: auto;
+  }
 }
 
 .rolling-text {
@@ -453,6 +623,7 @@ html.has-scroll-dragging {
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
+  display: none;
 }
 
 .c-scrollbar:hover {

@@ -5,6 +5,11 @@
   width: 100%;
   height: auto;
   padding: 200px var(--active-margin-grid) 320px;
+  position: relative;
+
+  @include small-screen() {
+    padding: 120px var(--active-margin-grid) 160px;
+  }
 }
 
 .about-canvas {
@@ -14,10 +19,19 @@
   position: relative;
   overflow: hidden;
 
+  @include large-screen() {
+    aspect-ratio: 4 / 3;
+  }
+
+  @include tablet-screen() {
+    width: 100%;
+  }
+
   .about-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.8);
   }
 }
 
@@ -25,6 +39,21 @@
   width: fit-content;
   position: relative;
   margin-top: -280px;
+
+  @include large-screen() {
+    margin-top: -160px;
+  }
+
+  @include tablet-screen() {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  &-title {
+    @include tablet-screen {
+      text-align: right;
+    }
+  }
 
   &-text {
     position: absolute;
@@ -38,4 +67,8 @@
   width: 100%;
   height: auto;
   padding: 280px var(--active-margin-grid) 160px;
+
+  @include small-screen() {
+    padding: 160px var(--active-margin-grid);
+  }
 }

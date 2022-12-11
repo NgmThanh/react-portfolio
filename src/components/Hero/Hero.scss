@@ -12,12 +12,20 @@
 	height: 100vh;
 	padding: 32vh var(--active-margin-grid) 0;
 
-	h1#hero-title {
+	@include tablet-screen {
+		padding: 40vh var(--active-margin-grid) 0;
+	}
+
+	.container-title {
 		position: relative;
+		z-index: 10;
+		display: flex;
+		flex-flow: column;
+		gap: 32px;
 	}
 
 	.hero-image {
-		width: 24vw;
+		width: clamp(360px, 24vw, 24vw);
 		height: auto;
 		aspect-ratio: 2/3;
 		position: absolute;
@@ -27,6 +35,11 @@
 		transform: translate(-50%, -50%);
 		z-index: 0;
 		filter: drop-shadow(10px 20px 40px rgba(0, 0, 0, 0.25));
+
+		@include tablet-screen {
+			top: 400px;
+			width: clamp(270px, 70%, 360px);
+		}
 
 		img {
 			width: 100%;
@@ -40,4 +53,9 @@
 	position: absolute !important;
 	bottom: 40px;
 	right: var(--active-margin-grid);
+
+	@include tablet-screen {
+		bottom: var(--active-margin-grid);
+		display: none;
+	}
 }

@@ -7,6 +7,10 @@
   background: var(--col-dark);
   display: flex;
   position: relative;
+
+  @include small-screen {
+    padding: 160px 0;
+  }
 }
 
 .works-title {
@@ -15,6 +19,18 @@
   top: 16vh;
   left: var(--active-margin-grid);
   z-index: 2;
+
+  @include large-screen {
+    top: 20vh;
+  }
+
+  @include small-screen {
+    top: 8vh;
+  }
+
+  @include mobile-screen {
+    top: 16vh;
+  }
 }
 
 .work-slider {
@@ -25,7 +41,7 @@
   gap: 32px;
 
   .work-content a {
-    width: 29vw;
+    width: clamp(360px, 29vw, 29vw);
     height: auto;
     aspect-ratio: 3/4;
     display: flex;
@@ -35,6 +51,10 @@
 
     &:hover > .work-canvas .work-image {
       transform: scale(1.15);
+    }
+    
+    @include mobile-screen {
+      gap: 16px;
     }
 
     .work-canvas {
