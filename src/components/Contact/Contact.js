@@ -47,7 +47,7 @@ export default function Contact() {
 
       <div className="mid-container">
         <div className="contact-img-container">
-          <img src={contactImage} alt="contact" className="contact-img" data-scroll></img>
+          <img src={contactImage} alt="contact" className="contact-img" data-scroll data-scroll-speed="-1" data-scroll-target=".contact-img-container"></img>
         </div>
 
         <div className="links">

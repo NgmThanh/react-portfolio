@@ -102,7 +102,8 @@ export default function App() {
       options={
         {
           smooth: true,
-          multiplier: .8, 
+          multiplier: .8,
+          lerp: .08, 
         }
       }
       watch={

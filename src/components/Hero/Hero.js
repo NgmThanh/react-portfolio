@@ -39,14 +39,14 @@ export default function Hero() {
     <section id="home" className="main-hero-section" data-scroll-section>
       <div className="text text-24 font-neutral mb-32 ml-1">I'm a</div>
 
-      <h1 id="hero-title" className="font-white text-center title title-hero" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4">
+      <h1 id="hero-title" className="font-white text-center title title-hero" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
         <span>Creative Designer</span>
       </h1>
 
       <div className="text text-24 font-neutral ml-1">From France</div>
 
       <div className="hero-image">
-        <img src={hero} alt="hero"></img>
+        <img src={hero} alt="hero" data-scroll data-scroll-speed="-1" data-scroll-target=".hero-image"></img>
       </div>
 
       <div className="scroll-text text font-white">Scroll to explore</div>
