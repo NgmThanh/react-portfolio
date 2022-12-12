@@ -3,6 +3,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/src/locomotive-scroll.scss'
 
 export default function useLocoScroll() {
+
   useEffect(() => {
     const scrollEl = document.querySelector('#main-container');
     const locoScroll = new LocomotiveScroll({
@@ -25,7 +26,9 @@ export default function useLocoScroll() {
         lerp: .08,
         class: "is-reveal",
       },
-    })
+    });
+
+    locoScroll.destroy();
 
     // --------------------------------------------------------
     // Locomotive Anchor Scroll
@@ -43,5 +46,11 @@ export default function useLocoScroll() {
         locoScroll.scrollTo(target);
       });
     });
+
+    new ResizeObserver(() => locoScroll.update()).observe(document.querySelector("[data-scroll-container]"))
+
+    locoScroll.init();
+    locoScroll.start();
+    locoScroll.update();
   }, []);
 }

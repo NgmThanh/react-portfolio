@@ -447,6 +447,18 @@ a {
   padding-right: 93.6vw;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--col-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // .transition-layer {
 //   position: sticky;
 //   width: 100%;
@@ -623,7 +635,7 @@ html.has-scroll-dragging {
   transform-origin: center right;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0;
-  display: none;
+  // display: none;
 }
 
 .c-scrollbar:hover {

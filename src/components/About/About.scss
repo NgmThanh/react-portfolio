@@ -32,6 +32,13 @@
     height: 100%;
     object-fit: cover;
     filter: brightness(0.8);
+    will-change: transform;
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path 1s var(--custom-ease-in);
+
+    &.is-reveal {
+      clip-path: inset(0% 0% 0% 0%);
+    }
   }
 }
 

@@ -1,10 +1,16 @@
 import './Hero.scss';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 // import gsap from 'gsap';
 // import SplitText from '../../utils/SplitText3.min.js'
 import hero from "../../images/hero.jpg";
+import cn from 'classnames';
 
 export default function Hero() {
+  const [reveal, setReveal] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setReveal(true), 100);
+  }, []);
 
   useEffect(() => {
     // // --------------------------------------------------------
@@ -38,7 +44,7 @@ export default function Hero() {
         <div className="text text-24 font-neutral ml-1 tablet-ml-0" data-scroll data-scroll-speed="-1">From France</div>
       </div>
 
-      <div className="hero-image">
+      <div className={cn("hero-image", { "is-reveal": reveal })}>
         <img src={hero} alt="hero" data-scroll data-scroll-speed="-1" data-scroll-target=".hero-image"></img>
       </div>
 
