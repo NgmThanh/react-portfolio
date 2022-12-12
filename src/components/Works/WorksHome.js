@@ -3,10 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 // import gsap from "gsap";
 // import SplitText from '../../utils/SplitText3.min.js';
 import cn from 'classnames';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function WorksHome() {
   const ref = useRef(null);
-
   const [reveal, setReveal] = useState(false);
 
   useEffect(() => {
@@ -69,24 +70,26 @@ export default function WorksHome() {
   ]
 
   const workSliderContent = works.map((work, key) =>
-    <a className={cn("work-item", { "is-reveal": reveal })} key={key} href={work.link} target="_blank" rel="noreferrer">
-      <div className="work-canvas">
-        <img className="work-item-image" src={work.thumbnail} alt={work.title} data-scroll data-scroll-speed="-1" data-scroll-target=".work-canvas"></img>
-      </div>
-      <div className="work-description">
-        <h3 className="text-24 font-white">{work.title}</h3>
-        <p className="work-detail font-neutral text">{work.detail}</p>
-      </div>
-    </a>
+    <SwiperSlide key={key} className={cn("work-item", { "is-reveal": reveal })}>
+      <a href={work.link} target="_blank" rel="noreferrer">
+        <div className="work-canvas">
+          <img className="work-item-image" src={work.thumbnail} alt={work.title} data-scroll data-scroll-speed="-1" data-scroll-target=".work-canvas"></img>
+        </div>
+        <div className="work-description">
+          <h3 className="text-24 font-white">{work.title}</h3>
+          <p className="work-detail font-neutral text">{work.detail}</p>
+        </div>
+      </a>
+    </SwiperSlide>
   )
 
   return (
     <section id="works-home" className={cn("home-works-section", { "is-reveal": reveal })} data-scroll-section>
       <h2 ref={ref} id="works-title" className={cn("works-title title title-works font-white", { "is-reveal": reveal })} data-scroll data-scroll-direction="vertical" data-scroll-speed="2">Recent Works</h2>
 
-      <div className="work-slider">
+      <Swiper slidesPerView={"auto"} className="work-slider">
         {workSliderContent}
-      </div>
-    </section >
+      </Swiper>
+    </section>
   )
 }

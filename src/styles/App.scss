@@ -94,6 +94,7 @@ a {
 .title-hero {
   font-size: 22vw;
   text-align: left;
+  line-height: 80%;
 
   @include small-screen() {
     font-size: clamp(20rem, 22vw, 22vw);

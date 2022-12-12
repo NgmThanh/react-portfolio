@@ -37,11 +37,11 @@ export default function Hero() {
   return (
     <section id="home" className="main-hero-section" data-scroll-section>
       <div className="container-title">
-        <div className="text text-24 font-neutral ml-1 mb-24 tablet-ml-0" data-scroll data-scroll-speed="-1">I'm a</div>
+        <div className="text text-24 font-neutral ml-1 mb-24 tablet-ml-0 tablet-mb-0" data-scroll data-scroll-speed="-1">I'm a</div>
         <h1 id="hero-title" className="font-white ml-1 tablet-ml-0 title title-hero" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
           Creative Designer
         </h1>
-        <div className="text text-24 font-neutral ml-1 tablet-ml-0" data-scroll data-scroll-speed="-1">From France</div>
+        <div className="text text-24 font-neutral ml-1 tablet-ml-0 from-france" data-scroll data-scroll-speed="-1">From France</div>
       </div>
 
       <div className={cn("hero-image", { "is-reveal": reveal })}>
