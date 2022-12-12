@@ -8,18 +8,21 @@ export default function useLocoScroll() {
     const locoScroll = new LocomotiveScroll({
       el: scrollEl,
       smooth: true,
-      multiplier: 1,
+      multiplier: .8,
+      lerp: .08,
       class: 'is-reveal',
       mobile: {
         breakpoint: 0,
         smooth: true,
-        multiplier: 1,
+        multiplier: 8,
+        lerp: .08,
         class: "is-reveal",
       },
       tablet: {
         breakpoint: 0,
         smooth: true,
-        multiplier: 1,
+        multiplier: 8,
+        lerp: .08,
         class: "is-reveal",
       },
     })

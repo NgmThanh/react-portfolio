@@ -3,7 +3,6 @@ import '../styles/App.scss';
 import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 export default function App() {
 
@@ -98,36 +97,18 @@ export default function App() {
   }, []);
 
   return (
-    <LocomotiveScrollProvider
-      options={
-        {
-          smooth: true,
-          multiplier: .8,
-          lerp: .08,
-        }
-      }
-      watch={
-        [
-          //..all the dependencies you want to watch to update the scroll.
-          //  Basicaly, you would want to watch page/location changes
-          //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-        ]
-      }
-      containerRef={containerRef}
-    >
-      <main id="main-container" className="App" ref={containerRef} data-scroll-container>
-        <div id="cursor" className="cursor"></div>
-        <div className="follower"></div>
+    <main id="main-container" className="App" ref={containerRef} data-scroll-container>
+      <div id="cursor" className="cursor"></div>
+      <div className="follower"></div>
 
-        <Menu />
+      <Menu />
 
-        {/* <div className="transition-layer">
+      {/* <div className="transition-layer">
         <div className="bottom-layer">
           <div className="bottom-layer bottom-layer--2"></div>
           <div className="bottom-layer bottom-layer--3"></div>
         </div>
       </div> */}
-      </main>
-    </LocomotiveScrollProvider>
+    </main>
   );
 }
