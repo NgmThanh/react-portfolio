@@ -69,35 +69,34 @@ export default function Menu() {
           </div>
         </nav>
 
-        <div className="mobile-container">
-          <div className="mobile">
-            <div className="mobile-logo">
-              <Link to="/">
-                <img src={logo} alt="MT. Logo" />
-              </Link>
+
+        <div className="mobile">
+          <div className="mobile-logo">
+            <Link to="/">
+              <img src={logo} alt="MT. Logo" />
+            </Link>
+          </div>
+
+          <div className="mobile__links">
+            <span className="title title-menu font-white">Menu</span>
+            <span className="text font-white hover-underline-animation"><a href="#works-home">Works</a></span>
+            <span className="text font-white hover-underline-animation"><a href="#about">About</a></span>
+            <span className="text font-white hover-underline-animation"><a href="#contact">Contact</a></span>
+          </div>
+
+          <div className="mobile__contact">
+            <div className="links">
+              <div className="link-title text">Socials</div>
+              <div className="link text font-white hover-underline-animation"><a href="https://www.behance.net/minhthanhnguyen3/" target="_blank" rel="noreferrer">Behance</a></div>
+              <div className="link text font-white hover-underline-animation"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></div>
+              <div className="link text font-white hover-underline-animation"><a href="https://www.linkedin.com/in/ngmthanh/" target="_blank" rel="noreferrer">LinkedIn</a></div>
             </div>
 
-            <div className="mobile__links">
-              <span className="title title-menu font-white">Menu</span>
-              <span className="text font-white hover-underline-animation"><a href="#works-home">Works</a></span>
-              <span className="text font-white hover-underline-animation"><a href="#about">About</a></span>
-              <span className="text font-white hover-underline-animation"><a href="#contact">Contact</a></span>
-            </div>
-
-            <div className="mobile__contact">
-              <div className="links">
-                <div className="link-title text">Socials</div>
-                <div className="link text font-white hover-underline-animation"><a href="https://www.behance.net/minhthanhnguyen3/" target="_blank" rel="noreferrer">Behance</a></div>
-                <div className="link text font-white hover-underline-animation"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></div>
-                <div className="link text font-white hover-underline-animation"><a href="https://www.linkedin.com/in/ngmthanh/" target="_blank" rel="noreferrer">LinkedIn</a></div>
-              </div>
-
-              <div className="links">
-                <div className="link-title text">Contact</div>
-                <div className="link text font-white hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
-                <div className="link text font-white hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
-                <div className="link text font-white hover-underline-animation">&#8205;</div>
-              </div>
+            <div className="links">
+              <div className="link-title text">Contact</div>
+              <div className="link text font-white hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
+              <div className="link text font-white hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
+              <div className="link text font-white hover-underline-animation">&#8205;</div>
             </div>
           </div>
         </div>
