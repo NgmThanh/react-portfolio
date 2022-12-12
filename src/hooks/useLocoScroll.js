@@ -12,19 +12,16 @@ export default function useLocoScroll() {
       multiplier: .8,
       lerp: .08,
       class: 'is-reveal',
-      mobile: {
-        breakpoint: 0,
+      reloadOnContextChange: true,
+      touchMultiplier: 4,
+      smoothMobile: 0,
+      smartphone: {
         smooth: true,
-        multiplier: 8,
-        lerp: .08,
-        class: "is-reveal",
+        breakpoint: 767
       },
       tablet: {
-        breakpoint: 0,
         smooth: true,
-        multiplier: 8,
-        lerp: .08,
-        class: "is-reveal",
+        breakpoint: 1024
       },
     });
 

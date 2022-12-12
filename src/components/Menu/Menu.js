@@ -1,4 +1,4 @@
-import './Menu.scss'
+import './Menu.scss';
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Works from '../Works/InnerWorks';
@@ -22,124 +22,43 @@ export default function Menu() {
     //   } else {
     //     menu.style.top = "-120px";
     //   }
-
     //   prevScrollpos = currentScrollPos;
     // }
 
     // Click menu event
-    // const menuBtn = document.querySelector(".menu__inner--hamburger");
-    // const menuLayout = document.querySelector(".menu-opened");
+    const hamburger = document.querySelector(".hamburger-check");
+    const mobileWindow = document.querySelector(".mobile");
+    const links = document.querySelectorAll(".mobile__links a");
 
-    // menuBtn.onclick = () => {
-    //   menuLayout.classList.toggle("active")
-    // }
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileWindow.classList.remove("opened");
+        hamburger.checked = false;
+      });
+    });
 
+    hamburger.addEventListener("change", () => {
+      mobileWindow.classList.toggle("opened");
+    });
   }, []);
 
   return (
-    // <Router>
-    //   <nav id="menu" className="menu">
-    //     <div className="menu__inner">
-    //       <Link to="/"><div><span>M</span><span className="italic side-subtitle">Thanh</span></div></Link>
-    //       <ul>
-    //         <li><Link to="/">Home</Link></li>
-    //         <li><Link to="/about" id="aboutButton">About</Link></li>
-    //         <li><Link to="/works" id="projectButton">Projects</Link></li>
-    //         <li><Link to="/contact" id="contactButton">Contact</Link></li>
-    //       </ul>
-    //     </div>
-    //   </nav>
-
-    //   <Routes>
-    //     <Route path="/" element={<App />} />
-    //     <Route path="/about" element={<About />} />
-    //     <Route path="/works" element={<Works />} />
-    //     <Route path="/contact" element={<Contact />} />
-    //     <Route path="*" element={<Error />} />
-    //   </Routes>
-    // </Router>
-    //   <Router>
-    //   {/* <nav id="menu" className="menu">
-    //     <div className="menu__inner">
-    //       <Link to="/"><div><span>M</span><span className="italic side-subtitle">Thanh</span></div></Link>
-    //       <ul>
-    //         <li><Link to="/">Home</Link></li>
-    //         <li><Link to="/about" id="aboutButton">About</Link></li>
-    //         <li><Link to="/works" id="projectButton">Projects</Link></li>
-    //         <li><Link to="/contact" id="contactButton">Contact</Link></li>
-    //       </ul>
-    //     </div>
-    //   </nav> */}
-    //   <Menu />
-
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/about" element={<About />} />
-    //     <Route path="/works" element={<Works />} />
-    //     <Route path="/contact" element={<Contact />} />
-    //     <Route path="*" element={<Error />} />
-    //   </Routes>
-    // </Router>
-
-    <section>
-      {/* <nav id="menu" className="menu">
-          <div className="menu__inner">
-            <div className="menu__inner--hamburger"><div className="hamburger-icon"></div><span>Menu</span></div>
-            <div className="menu__inner--logo"><Link to="/">M<span className="logo-mid font-gold">T</span>H</Link></div>
-            <div className="menu__inner--contact"><span>Get in touch</span><div className="contact-circle"></div></div>
-          </div>
-        </nav>
-
-        <section id="menu-opened" className="menu-opened">
-          <div className="menu-content">
-            <div className="menu-left">
-              <div className="menu-left__inner">
-                <div className="spaced-subtitle font-gold">Menu</div>
-                <div>
-                  <ul className="menu-pages">
-                    <li className="title-fourth">
-                      <Link to="/">
-                        <span className="nb-hover-menu font-bright">01</span>
-                        <span className="element-menu">Home</span>
-                      </Link>
-                    </li>
-                    <li className="title-fourth">
-                      <Link to="/About" className="active">
-                        <span className="nb-hover-menu font-bright">02</span>
-                        <span className="element-menu">About me</span>
-                      </Link>
-                    </li>
-                    <li className="title-fourth">
-                      <Link to="/Works">
-                        <span className="nb-hover-menu font-bright">03</span>
-                        <span className="element-menu">Projects</span>
-                      </Link>
-                    </li>
-                    <li className="title-fourth">
-                      <Link to="/">
-                        <span className="nb-hover-menu font-bright">04</span>
-                        <span className="element-menu">Contact</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="menu-right">
-              <div className="menu-right__inner">
-                <img src="./summary-1.jpg" alt="menu" className="col-3"></img>
-              </div>
-            </div>
-          </div>
-        </section > */}
+    <section className="menu-section">
+      <div className="hamburger">
+        {/* Hamburger button */}
+        <input type="checkbox" className="hamburger-check" />
+        <div className="hamburger-lines">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
       <Router>
         <nav id="menu" className="menu">
           <div className="menu__inner">
             <div className="menu__inner--logo">
               <Link to="/">
-                <img src={logo} alt="MT. Logo"/>
+                <img src={logo} alt="MT. Logo" />
               </Link>
             </div>
             <div className="menu__inner--links">
@@ -149,6 +68,37 @@ export default function Menu() {
             </div>
           </div>
         </nav>
+
+        <div className="mobile">
+          <div className="mobile-logo">
+            <Link to="/">
+              <img src={logo} alt="MT. Logo" />
+            </Link>
+          </div>
+
+          <div className="mobile__links">
+            <span className="title title-menu font-white">Menu</span>
+            <span className="text font-white hover-underline-animation"><a href="#works-home">Works</a></span>
+            <span className="text font-white hover-underline-animation"><a href="#about">About</a></span>
+            <span className="text font-white hover-underline-animation"><a href="#contact">Contact</a></span>
+          </div>
+
+          <div className="mobile__contact">
+            <div className="links">
+              <div className="link-title text">Socials</div>
+              <div className="link text font-white hover-underline-animation"><a href="https://www.behance.net/minhthanhnguyen3/" target="_blank" rel="noreferrer">Behance</a></div>
+              <div className="link text font-white hover-underline-animation"><a href="https://www.instagram.com/minhthanh7219/" target="_blank" rel="noreferrer">Instagram</a></div>
+              <div className="link text font-white hover-underline-animation"><a href="https://www.linkedin.com/in/ngmthanh/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+            </div>
+
+            <div className="links">
+              <div className="link-title text">Contact</div>
+              <div className="link text font-white hover-underline-animation"><a href="mailto:nmthanh99@gmail.com">nmthanh99@gmail.com</a></div>
+              <div className="link text font-white hover-underline-animation"><a href="tel:+33621617481">+33 6 21 61 74 81</a></div>
+              <div className="link text font-white hover-underline-animation">&#8205;</div>
+            </div>
+          </div>
+        </div>
 
         <Routes>
           <Route path="/" element={<Home />} />
