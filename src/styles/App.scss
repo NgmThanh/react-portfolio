@@ -459,6 +459,25 @@ a {
   padding-right: 93.6vw;
 }
 
+@keyframes loading {
+  0% {
+    transform: translate3d(0, 0, 0);
+    scale: 0.8;
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+    scale: 1.2;
+    opacity: 1;
+    
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+    scale: 1.2;
+    opacity: 0;
+  }
+}
+
 .loader {
   position: fixed;
   top: 0;
@@ -469,6 +488,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: loading 1s var(--custom-ease-in-out) forwards;
+  will-change: transform;
 }
 
 // .transition-layer {

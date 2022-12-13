@@ -4,7 +4,7 @@ import SeparatorImage from '../components/SeparatorImage/SeparatorImage';
 import AboutInstagram from '../components/About/About-instagram';
 import WorksHome from '../components/Works/WorksHome';
 import Contact from '../components/Contact/Contact';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
