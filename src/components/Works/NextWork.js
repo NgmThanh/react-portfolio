@@ -4,7 +4,7 @@ export default function NextWork() {
 
   return (
     <section id="next-work" className="next-work-section" data-scroll-section>
-      <img src={require("../../images/real-estate-exterior.jpg")} alt="next work background" className="next-work-bg"></img>
+      <img src={require("../../images/real-estate-exterior.webp")} alt="next work background" className="next-work-bg"></img>
 
       <div className="wrapper-rolling-text">
         <div className="rolling-text title-200 font-white">
@@ -15,7 +15,7 @@ export default function NextWork() {
       <div className="mid-container">
         <div className="next-work-container">
           <div className="next-work-img-container">
-            <img src={require("../../images/real-estate-exterior-thumbnail.jpg")} alt="next work illustration" className="next-work-img" data-scroll></img>
+            <img src={require("../../images/real-estate-exterior-thumbnail.webp")} alt="next work illustration" className="next-work-img" data-scroll></img>
           </div>
           <div className="text font-white-grey font-weight-400 hover-underline-animation">Next Project</div>
         </div>

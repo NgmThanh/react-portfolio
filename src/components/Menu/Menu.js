@@ -46,7 +46,8 @@ export default function Menu() {
     <section>
       <div className="hamburger">
         {/* Hamburger button */}
-        <input type="checkbox" className="hamburger-check" />
+        <input type="checkbox" className="hamburger-check" name="hamburger"/>
+        <label for="hamburger">{/* None */}</label>
         <div className="hamburger-lines">
           <span></span>
           <span></span>
@@ -58,7 +59,7 @@ export default function Menu() {
           <div className="menu__inner">
             <div className="menu__inner--logo">
               <Link to="/">
-                <img src={logo} alt="MT. Logo" />
+                <img src={logo} alt="MT. Logo" width="80" height="45"/>
               </Link>
             </div>
             <div className="menu__inner--links">
@@ -73,7 +74,7 @@ export default function Menu() {
         <div className="mobile">
           <div className="mobile-logo">
             <Link to="/">
-              <img src={logo} alt="MT. Logo" />
+              <img src={logo} alt="MT. Logo" width="80" height="45"/>
             </Link>
           </div>
 

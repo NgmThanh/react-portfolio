@@ -2,7 +2,7 @@ import './Hero.scss';
 import { useEffect, useState } from 'react';
 // import gsap from 'gsap';
 // import SplitText from '../../utils/SplitText3.min.js'
-import hero from "../../images/hero.jpg";
+import hero from "../../images/hero.webp";
 import cn from 'classnames';
 
 export default function Hero() {

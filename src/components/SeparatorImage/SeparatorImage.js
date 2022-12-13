@@ -1,5 +1,5 @@
 import './SeparatorImage.scss';
-import imageSeparator from "../../images/parallax-separator.jpg";
+import imageSeparator from "../../images/parallax-separator.webp";
 
 export default function SeparatorImage() {
   return (

@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import contactImage from "../../images/contact.jpg"
+import contactImage from "../../images/contact.webp"
 import React, { useEffect } from 'react';
 
 export default function Contact() {

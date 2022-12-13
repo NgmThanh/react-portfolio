@@ -36,10 +36,10 @@ export default function WorksHome() {
     // });
   }, []);
 
-  const thumbnailWork1 = require('../../images/projects/Self-branding.jpg');
-  const thumbnailWork2 = require('../../images/projects/HD-assistante.jpg');
-  const thumbnailWork3 = require('../../images/projects/RE-management.jpg');
-  const thumbnailWork4 = require('../../images/projects/Lol-universe.jpg');
+  const thumbnailWork1 = require('../../images/projects/Self-branding.webp');
+  const thumbnailWork2 = require('../../images/projects/HD-assistante.webp');
+  const thumbnailWork3 = require('../../images/projects/RE-management.webp');
+  const thumbnailWork4 = require('../../images/projects/Lol-universe.webp');
 
   const works = [
     {
