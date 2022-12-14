@@ -13,7 +13,7 @@ export default function useLocoScroll() {
       lerp: .08,
       class: 'is-reveal',
       reloadOnContextChange: true,
-      touchMultiplier: 4,
+      touchMultiplier: 3,
       smoothMobile: 0,
       smartphone: {
         smooth: true,

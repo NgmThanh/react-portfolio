@@ -1,7 +1,6 @@
 import './Menu.scss';
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Works from '../Works/InnerWorks';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Error from '../../pages/Error';
 import logo from "../../images/logo.svg";
 import Home from '../../pages/Home';
@@ -46,8 +45,8 @@ export default function Menu() {
     <section>
       <div className="hamburger">
         {/* Hamburger button */}
-        <input type="checkbox" className="hamburger-check" name="hamburger"/>
-        <label for="hamburger">{/* None */}</label>
+        <input type="checkbox" className="hamburger-check" name="hamburger" />
+        <label htmlFor="hamburger">{/* None */}</label>
         <div className="hamburger-lines">
           <span></span>
           <span></span>
@@ -58,9 +57,9 @@ export default function Menu() {
         <nav id="menu" className="menu">
           <div className="menu__inner">
             <div className="menu__inner--logo">
-              <Link to="/">
-                <img src={logo} alt="MT. Logo" width="80" height="45"/>
-              </Link>
+              <a href="#home">
+                <img src={logo} alt="MT. Logo" width="80" height="45" />
+              </a>
             </div>
             <div className="menu__inner--links">
               <span className="text font-white hover-underline-animation"><a href="#works-home">Works</a></span>
@@ -73,9 +72,9 @@ export default function Menu() {
 
         <div className="mobile">
           <div className="mobile-logo">
-            <Link to="/">
-              <img src={logo} alt="MT. Logo" width="80" height="45"/>
-            </Link>
+            <a href="#home">
+              <img src={logo} alt="MT. Logo" width="80" height="45" />
+            </a>
           </div>
 
           <div className="mobile__links">
@@ -104,7 +103,7 @@ export default function Menu() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/works" element={<Works />} />
+          {/* <Route path="/works" element={<Works />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>

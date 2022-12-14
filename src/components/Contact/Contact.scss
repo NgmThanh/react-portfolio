@@ -6,11 +6,18 @@
   display: flex;
   align-items: center;
   background: var(--col-dark-grey);
-  padding: 160px 0;
+  padding: 160px var(--active-margin-grid);
 
   @include small-screen() {
     height: auto;
-    padding: 160px var(--active-margin-grid);
+  }
+
+  @include tablet-screen() {
+    padding: 160px var(--active-margin-grid) 120px;
+  }
+
+  @include mobile-screen() {
+    padding: 120px var(--active-margin-grid) 100px;
   }
 
   .mid-container {
@@ -61,6 +68,12 @@
     height: 100%;
     object-fit: cover;
     will-change: transform;
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path 1s var(--custom-ease-in);
+    
+    &.is-reveal {
+      clip-path: inset(0% 0% 0% 0%);
+    }
   }
 
   .links-container {
@@ -103,5 +116,6 @@
     position: absolute;
     left: var(--active-margin-grid);
     bottom: 40px;
+    z-index: 10;
   }
 }

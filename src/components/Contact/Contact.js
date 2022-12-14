@@ -1,8 +1,10 @@
 import "./Contact.scss";
 import contactImage from "../../images/contact.webp"
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import cn from 'classnames';
 
 export default function Contact() {
+  const [reveal, setReveal] = useState(false);
 
   useEffect(() => {
     // --------------------------------------------------------
@@ -49,7 +51,7 @@ export default function Contact() {
 
       <div className="mid-container">
         <div className="contact-img-container">
-          <img src={contactImage} alt="contact" className="contact-img"></img>
+          <img src={contactImage} alt="contact" className={cn("contact-img", { "is-reveal": reveal })} data-scroll data-scroll-target=".contact-img-container"></img>
         </div>
 
         <div className="links-container">

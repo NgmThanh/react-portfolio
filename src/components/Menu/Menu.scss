@@ -43,6 +43,7 @@
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
       opacity 0.55s ease;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.4));
   }
 
   input:checked~.hamburger-lines span {

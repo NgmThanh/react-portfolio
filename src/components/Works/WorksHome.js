@@ -73,7 +73,7 @@ export default function WorksHome() {
     <SwiperSlide key={key} className={cn("work-item", { "is-reveal": reveal })}>
       <a href={work.link} target="_blank" rel="noreferrer">
         <div className="work-canvas">
-          <img className="work-item-image" src={work.thumbnail} alt={work.title} data-scroll data-scroll-speed="-1" data-scroll-target=".work-canvas"></img>
+          <img className="work-item-image" src={work.thumbnail} alt={work.title} data-scroll data-scroll-speed="-2" data-scroll-target=".work-canvas"></img>
         </div>
         <div className="work-description">
           <h3 className="text-24 font-white">{work.title}</h3>
