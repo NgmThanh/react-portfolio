@@ -36,34 +36,42 @@ export default function WorksHome() {
     // });
   }, []);
 
-  const thumbnailWork1 = require('../../images/projects/Self-branding.webp');
-  const thumbnailWork2 = require('../../images/projects/HD-assistante.webp');
-  const thumbnailWork3 = require('../../images/projects/RE-management.webp');
-  const thumbnailWork4 = require('../../images/projects/Lol-universe.webp');
+  const thumbnailWork1 = require('../../images/projects/Lol-universe.webp');
+  const thumbnailWork2 = require('../../images/projects/RE-management.webp');
+  const thumbnailWork3 = require('../../images/projects/HD-assistante.webp');
+  const thumbnailWork4 = require('../../images/projects/Self-branding.webp');
+  const thumbnailWork5 = require('../../images/projects/MT-architecture.webp');
+
 
   const works = [
     {
+      "title": "MT Architecture",
+      "thumbnail": thumbnailWork5,
+      "detail": "UI / UX Design, Development",
+      "link": "https://www.behance.net/gallery/160351639/MT-Architecture",
+    },
+    {
       "title": "Self Branding",
-      "thumbnail": thumbnailWork1,
+      "thumbnail": thumbnailWork4,
       "detail": "UI / UX Design, Development",
       "link": "https://www.behance.net/gallery/158897383/Creative-Designer-Portfolio",
     },
     {
       "title": "HD Assistante",
-      "thumbnail": thumbnailWork2,
+      "thumbnail": thumbnailWork3,
       "detail": "UI / UX Design",
       "link": "https://www.behance.net/gallery/158436257/HD-Assistante-Website",
     },
     {
       "title": "Real Estate",
-      "thumbnail": thumbnailWork3,
+      "thumbnail": thumbnailWork2,
       "detail": "UI / UX Design",
       "link": "https://www.behance.net/gallery/156839471/Real-Estate-Management-Interface",
     },
 
     {
       "title": "LOL Universe",
-      "thumbnail": thumbnailWork4,
+      "thumbnail": thumbnailWork1,
       "detail": "UI / UX Design",
       "link": "https://www.behance.net/gallery/156836453/League-of-Legends-Universe",
     }
