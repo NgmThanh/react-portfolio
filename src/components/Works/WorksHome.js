@@ -41,9 +41,16 @@ export default function WorksHome() {
   const thumbnailWork3 = require('../../images/projects/HD-assistante.webp');
   const thumbnailWork4 = require('../../images/projects/Self-branding.webp');
   const thumbnailWork5 = require('../../images/projects/MT-architecture.webp');
+  const thumbnailWork6 = require('../../images/projects/Jasmin-bonheur.webp');
 
 
   const works = [
+    {
+      "title": "Jasmin Bonheur",
+      "thumbnail": thumbnailWork6,
+      "detail": "UI / UX Design, Development",
+      "link": "https://www.behance.net/gallery/161514471/Guerlain-Jasmin-Bonheur-Product-Landing-Page-Concept",
+    },
     {
       "title": "MT Architecture",
       "thumbnail": thumbnailWork5,
@@ -68,7 +75,6 @@ export default function WorksHome() {
       "detail": "UI / UX Design",
       "link": "https://www.behance.net/gallery/156839471/Real-Estate-Management-Interface",
     },
-
     {
       "title": "LOL Universe",
       "thumbnail": thumbnailWork1,

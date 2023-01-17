@@ -92,7 +92,7 @@
       filter: brightness(80%);
       will-change: transform;
       clip-path: inset(100% 0% 0% 0%);
-      transition: clip-path 1s var(--custom-ease-in), transform .8s var(--custom-ease-out);
+      transition: clip-path 1s var(--custom-ease-in), transform .6s var(--custom-ease-out);
 
       &.is-reveal {
         clip-path: inset(0% 0% 0% 0%);
