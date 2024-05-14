@@ -40,22 +40,29 @@ export default function WorksHome() {
   const thumbnailWork2 = require('../../images/projects/RE-management.webp');
   const thumbnailWork3 = require('../../images/projects/HD-assistante.webp');
   const thumbnailWork4 = require('../../images/projects/Self-branding.webp');
-  const thumbnailWork5 = require('../../images/projects/MT-architecture.webp');
   const thumbnailWork6 = require('../../images/projects/Jasmin-bonheur.webp');
+  const thumbnailWork7 = require('../../images/projects/Maylevia.webp');
+  const thumbnailWork8 = require('../../images/projects/Sablieres-studio.webp');
 
 
   const works = [
+    {
+      "title": "Sablieres Studio",
+      "thumbnail": thumbnailWork8,
+      "detail": "UI / UX Design, Development, Webflow",
+      "link": "https://www.behance.net/gallery/198418743/Architecture-Interior-Design-Agency-Website",
+    },
+    {
+      "title": "Maylevia",
+      "thumbnail": thumbnailWork7,
+      "detail": "UI / UX Design, Development, Webflow",
+      "link": "https://www.behance.net/gallery/198361935/Maylevia-E-commerce-platform-for-Italian-Gastronomy",
+    },
     {
       "title": "Jasmin Bonheur",
       "thumbnail": thumbnailWork6,
       "detail": "UI / UX Design, Development",
       "link": "https://www.behance.net/gallery/161514471/Guerlain-Jasmin-Bonheur-Product-Landing-Page-Concept",
-    },
-    {
-      "title": "MT Architecture",
-      "thumbnail": thumbnailWork5,
-      "detail": "UI / UX Design, Development",
-      "link": "https://www.behance.net/gallery/160351639/MT-Architecture",
     },
     {
       "title": "Self Branding",
